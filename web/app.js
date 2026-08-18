@@ -8,6 +8,9 @@ const textEn = document.getElementById('text-en');
 const textJa = document.getElementById('text-ja');
 const langSelect = document.getElementById('lang-select');
 
+// ループ管理用フラグ
+let isLoopRunning = false;
+
 // 字幕描画処理
 function renderSubtitle() {
     if (!wasmFindSubtitleId || !structBufferPtr || subtitlesData.length === 0) return;
@@ -31,10 +34,21 @@ function renderSubtitle() {
     textJa.textContent = '';
 }
 
-// レンダリングループ
+// レンダリングループ（停止しない安全構造）
 function animationLoop() {
-    if (!audio.paused) {
-        renderSubtitle();
+    if (audio.paused || audio.ended) {
+        isLoopRunning = false;
+        return;
+    }
+
+    renderSubtitle();
+    requestAnimationFrame(animationLoop);
+}
+
+// ループ開始関数（多重起動を防止）
+function startLoop() {
+    if (!isLoopRunning) {
+        isLoopRunning = true;
         requestAnimationFrame(animationLoop);
     }
 }
@@ -77,6 +91,9 @@ if (typeof Module !== 'undefined' && Module.calledRun) {
 }
 
 // イベント設定
-audio.addEventListener('play', () => requestAnimationFrame(animationLoop));
+audio.addEventListener('play', startLoop);
+audio.addEventListener('playing', startLoop); // 再開時や速度変更後の追従を強化
 audio.addEventListener('seeked', renderSubtitle);
+audio.addEventListener('ratechange', renderSubtitle); // 速度変更時にも即座に反映
+audio.addEventListener('timeupdate', renderSubtitle); // 保険用（万が一ループが停止してもフォールバック）
 langSelect.addEventListener('change', renderSubtitle);
