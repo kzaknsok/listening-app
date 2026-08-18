@@ -27,7 +27,7 @@ jobs:
       - name: Copy Assets
         run: |
           cp assets/script.json web/
-          cp assets/easy_english_01.wav web/
+          cp assets/easy_english_01.mp3 web/
 
       # 3. GitHub Pages へデプロイ
       - name: Deploy to GitHub Pages
