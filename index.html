@@ -1,0 +1,294 @@
+<!-- Test File -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Local Dev] WASM Subtitle Ultra Glass</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --accent-cyan: #00f2fe;
+            --accent-indigo: #4facfe;
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            max-width: 840px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            color: var(--text-primary); 
+            background: #030712;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 背景に配置するガラス透過用のアンビエント背景（光の玉） */
+        .glass-bg-orb-1 {
+            position: fixed;
+            top: 15%;
+            left: 20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(79, 172, 254, 0.4) 0%, rgba(0, 242, 254, 0) 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: -1;
+            animation: float-1 12s infinite alternate ease-in-out;
+        }
+
+        .glass-bg-orb-2 {
+            position: fixed;
+            bottom: 20%;
+            right: 20%;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.35) 0%, rgba(79, 70, 229, 0) 70%);
+            border-radius: 50%;
+            filter: blur(70px);
+            z-index: -1;
+            animation: float-2 15s infinite alternate ease-in-out;
+        }
+
+        @keyframes float-1 {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(40px, -30px) scale(1.1); }
+        }
+
+        @keyframes float-2 {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(-30px, 40px) scale(1.15); }
+        }
+
+        /* ヘッダーエリア */
+        .header-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #7dd3fc;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .header-tag::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background-color: #38bdf8;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #38bdf8;
+        }
+
+        h1 {
+            font-size: 1.85rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* 透明感を極めたクリスタルガラスカード */
+        .card { 
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            padding: 36px; 
+            border-radius: 24px; 
+            /* ガラスのエッジを再現する光の境界線 */
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            /* 上部からの光の反射効果 */
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.25),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* オーディオプレイヤー */
+        audio { 
+            width: 100%; 
+            margin-bottom: 24px; 
+            border-radius: 30px;
+            filter: invert(0.9) hue-rotate(180deg);
+            opacity: 0.85;
+            transition: opacity 0.2s;
+        }
+
+        audio:hover {
+            opacity: 1;
+        }
+
+        /* コントロール（言語切替） */
+        .controls { 
+            margin-bottom: 24px; 
+            display: flex; 
+            gap: 12px; 
+            align-items: center; 
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(12px);
+            padding: 10px 18px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .controls label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        select { 
+            padding: 8px 12px; 
+            border-radius: 8px; 
+            border: 1px solid rgba(255, 255, 255, 0.15); 
+            font-size: 0.9rem; 
+            font-weight: 500;
+            background: rgba(15, 23, 42, 0.6);
+            color: var(--text-primary);
+            width: 100%;
+            cursor: pointer;
+            outline: none;
+            backdrop-filter: blur(8px);
+            transition: border-color 0.2s;
+        }
+
+        select:focus {
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* 字幕表示ボックス（内側のレイヤーガラス） */
+        .subtitle-box { 
+            min-height: 190px; 
+            padding: 32px 24px; 
+            border-radius: 18px; 
+            background: rgba(0, 0, 0, 0.25); 
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            text-align: center; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            position: relative;
+            box-shadow: 
+                inset 0 2px 10px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .text-en { 
+            font-size: 1.45rem; 
+            font-weight: 600; 
+            color: #ffffff; 
+            margin-bottom: 12px; 
+            line-height: 1.5; 
+            letter-spacing: -0.01em;
+            word-break: break-word;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+        }
+
+        .text-ja { 
+            font-size: 1.1rem; 
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.75); 
+            line-height: 1.6; 
+            word-break: break-word;
+            text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px 10px;
+            }
+
+            .card {
+                padding: 24px 18px;
+                border-radius: 20px;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .subtitle-box {
+                min-height: 200px;
+                padding: 24px 16px;
+            }
+
+            .text-en {
+                font-size: 1.3rem;
+            }
+
+            .text-ja {
+                font-size: 1.0rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ガラス背景を引き立てるネオン光オーブ -->
+    <div class="glass-bg-orb-1"></div>
+    <div class="glass-bg-orb-2"></div>
+
+    <div class="card">
+        <div class="header-tag">Local WASM Engine</div>
+        <h1>Intelligence Subtitle Sync</h1>
+
+        <audio id="audio-player" controls src="assets/easy_english_01.wav"></audio>
+
+        <div class="controls">
+            <label for="lang-select">Display Mode</label>
+            <select id="lang-select">
+                <option value="both">English + Japanese</option>
+                <option value="en">English Only</option>
+                <option value="ja">Japanese Only</option>
+            </select>
+        </div>
+
+        <div class="subtitle-box" id="subtitle-box">
+            <div class="text-en" id="text-en">（音声を開始してください）</div>
+            <div class="text-ja" id="text-ja"></div>
+        </div>
+    </div>
+
+    <script src="local-dev.js"></script>
+</body>
+</html>
