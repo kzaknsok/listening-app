@@ -1,4 +1,5 @@
 let subtitlesData = [];
+let subtitlesMap = new Map();
 let wasmFindSubtitleId = null;
 let structBufferPtr = null;
 
@@ -7,17 +8,17 @@ const textEn = document.getElementById('text-en');
 const textJa = document.getElementById('text-ja');
 const langSelect = document.getElementById('lang-select');
 
-// 字幕更新処理
+// 字幕描画処理
 function renderSubtitle() {
     if (!wasmFindSubtitleId || !structBufferPtr || subtitlesData.length === 0) return;
 
     const currentMs = Math.floor(audio.currentTime * 1000);
 
-    // C言語の関数を呼び出して現在のIDを取得 ('pointer' 型で渡す)
+    // C言語関数の呼び出し
     const activeId = wasmFindSubtitleId(structBufferPtr, subtitlesData.length, currentMs);
 
     if (activeId !== -1) {
-        const item = subtitlesData.find(s => s.id === activeId);
+        const item = subtitlesMap.get(activeId); // MapからO(1)で高速取得
         if (item) {
             const mode = langSelect.value;
             textEn.textContent = (mode === 'both' || mode === 'en') ? item.text : '';
@@ -26,27 +27,34 @@ function renderSubtitle() {
         }
     }
     
-    // 空白時間（該当なし）の処理
     textEn.textContent = '';
     textJa.textContent = '';
 }
 
-// WASMの初期化完了イベント
-Module.onRuntimeInitialized = async () => {
+// レンダリングループ
+function animationLoop() {
+    if (!audio.paused) {
+        renderSubtitle();
+        requestAnimationFrame(animationLoop);
+    }
+}
+
+// 初期化処理
+const initWasm = async () => {
     try {
-        // C言語関数のバインド (第1引数は pointer に修正)
         wasmFindSubtitleId = Module.cwrap('find_subtitle_id', 'number', ['pointer', 'number', 'number']);
 
-        // JSONデータの読み込み
         const response = await fetch('script.json');
         if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+        
         subtitlesData = await response.json();
+        subtitlesMap.clear();
+        subtitlesData.forEach(item => subtitlesMap.set(item.id, item));
 
-        // C言語の構造体配列（SubtitleItem: int 3つ = 12バイト）用にメモリを確保
+        // C言語の構造体領域（12バイト/件）確保
         const ITEM_SIZE = 12; 
         structBufferPtr = Module._malloc(subtitlesData.length * ITEM_SIZE);
 
-        // C言語のメモリ領域へデータを書き込み
         subtitlesData.forEach((item, index) => {
             const offset = structBufferPtr + index * ITEM_SIZE;
             Module.setValue(offset, item.id, 'i32');
@@ -55,12 +63,20 @@ Module.onRuntimeInitialized = async () => {
         });
 
         console.log('WASM & Subtitle Data Ready');
-        renderSubtitle(); // 初期描画
+        renderSubtitle();
     } catch (err) {
         console.error('Initialization failed:', err);
     }
 };
 
-// イベントリスナーの設定（再生中・停止中の位置変更・言語切替に対応）
-audio.addEventListener('timeupdate', renderSubtitle);
+// 初期化タイミングの安全策
+if (typeof Module !== 'undefined' && Module.calledRun) {
+    initWasm();
+} else {
+    Module.onRuntimeInitialized = initWasm;
+}
+
+// イベント設定
+audio.addEventListener('play', () => requestAnimationFrame(animationLoop));
+audio.addEventListener('seeked', renderSubtitle);
 langSelect.addEventListener('change', renderSubtitle);
