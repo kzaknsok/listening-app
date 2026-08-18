@@ -1,0 +1,1194 @@
+[
+  {
+    "id": 1,
+    "start": 120,
+    "end": 2040,
+    "start_timestamp": "00:00",
+    "text": "Hi everybody, hope you're doing well.",
+    "japanese": "皆さんこんにちは、元気に過ごされていることを願っています。"
+  },
+  {
+    "id": 2,
+    "start": 2040,
+    "end": 9920,
+    "start_timestamp": "00:02",
+    "text": "Today I'm in the city of Münster in Germany, and I want to give you essential English phrases and vocabulary for tourists.",
+    "japanese": "今日私はドイツのミュンスターという都市にいます。観光客に役立つ必須の英語フレーズとボキャブラリーをお伝えしたいと思います。"
+  },
+  {
+    "id": 3,
+    "start": 9920,
+    "end": 19680,
+    "start_timestamp": "00:09",
+    "text": "Now before we get started, if you're someone who's looking to improve their confidence and fluency in speaking English, then why don't you check out our conversation calls with the link up here?",
+    "japanese": "始める前に、もし英語を話す自信と流暢さを向上させたいと思っているなら、上のリンクから私たちの英会話セッションをチェックしてみませんか？"
+  },
+  {
+    "id": 4,
+    "start": 27750,
+    "end": 31040,
+    "start_timestamp": "00:27",
+    "text": "I'm sorry to interrupt your day, um, but could you help me?",
+    "japanese": "お忙しいところすみませんが、助けていただけますか？"
+  },
+  {
+    "id": 5,
+    "start": 31040,
+    "end": 31840,
+    "start_timestamp": "00:31",
+    "text": "Yes, of course.",
+    "japanese": "ええ、もちろんです。"
+  },
+  {
+    "id": 6,
+    "start": 31840,
+    "end": 34960,
+    "start_timestamp": "00:31",
+    "text": "How can I help you?",
+    "japanese": "どのようなご用件でしょうか？"
+  },
+  {
+    "id": 7,
+    "start": 34960,
+    "end": 36960,
+    "start_timestamp": "00:34",
+    "text": "Excuse me, I'm sorry to interrupt your day.",
+    "japanese": "すみません、お邪魔して申し訳ありません。"
+  },
+  {
+    "id": 8,
+    "start": 36960,
+    "end": 37760,
+    "start_timestamp": "00:36",
+    "text": "Ah, no problem.",
+    "japanese": "あ、問題ないですよ。"
+  },
+  {
+    "id": 9,
+    "start": 37760,
+    "end": 42480,
+    "start_timestamp": "00:37",
+    "text": "Uh, I'm kind of new to the city, um, are you from here?",
+    "japanese": "あの、この街に来たばかりなのですが、ここ出身の方ですか？"
+  },
+  {
+    "id": 10,
+    "start": 42480,
+    "end": 43520,
+    "start_timestamp": "00:42",
+    "text": "I'm studying here.",
+    "japanese": "ここで学生をしています。"
+  },
+  {
+    "id": 11,
+    "start": 43520,
+    "end": 44320,
+    "start_timestamp": "00:43",
+    "text": "Excuse me.",
+    "japanese": "すみません。"
+  },
+  {
+    "id": 12,
+    "start": 44320,
+    "end": 44720,
+    "start_timestamp": "00:44",
+    "text": "Hello.",
+    "japanese": "こんにちは。"
+  },
+  {
+    "id": 13,
+    "start": 44720,
+    "end": 49520,
+    "start_timestamp": "00:44",
+    "text": "Hi, sorry to interrupt your day, um, I'm new to the city, are you... are you from here?",
+    "japanese": "こんにちは、お忙しいところすみません。この街に来たばかりなのですが、ここ出身の方ですか？"
+  },
+  {
+    "id": 14,
+    "start": 49520,
+    "end": 50560,
+    "start_timestamp": "00:49",
+    "text": "Yeah, we're living here in Münster.",
+    "japanese": "はい、私たちはここミュンスターに住んでいます。"
+  },
+  {
+    "id": 15,
+    "start": 50560,
+    "end": 52820,
+    "start_timestamp": "00:50",
+    "text": "You're living here. Okay, excuse me.",
+    "japanese": "ここに住んでいるんですね。なるほど、すみません。"
+  },
+  {
+    "id": 16,
+    "start": 52820,
+    "end": 56640,
+    "start_timestamp": "00:52",
+    "text": "Hi, uh, sorry to interrupt you, um, are you from around here?",
+    "japanese": "こんにちは、お邪魔してすみません、この近くの出身ですか？"
+  },
+  {
+    "id": 17,
+    "start": 56770,
+    "end": 57840,
+    "start_timestamp": "00:56",
+    "text": "Yeah, I'm from Münster.",
+    "japanese": "はい、ミュンスター出身です。"
+  },
+  {
+    "id": 18,
+    "start": 57840,
+    "end": 58960,
+    "start_timestamp": "00:57",
+    "text": "Excuse me.",
+    "japanese": "すみません。"
+  },
+  {
+    "id": 19,
+    "start": 58960,
+    "end": 62160,
+    "start_timestamp": "00:58",
+    "text": "Hi, uh, sorry to interrupt your day, um, could you help me?",
+    "japanese": "こんにちは、お忙しいところすみません、助けていただけますか？"
+  },
+  {
+    "id": 20,
+    "start": 62160,
+    "end": 63760,
+    "start_timestamp": "01:02",
+    "text": "Yeah, sure. What can I do for you?",
+    "japanese": "ええ、もちろん。どうされましたか？"
+  },
+  {
+    "id": 21,
+    "start": 63760,
+    "end": 66160,
+    "start_timestamp": "01:03",
+    "text": "I'm in Münster for like one day.",
+    "japanese": "ミュンスターには1日だけ滞在しているんです。"
+  },
+  {
+    "id": 22,
+    "start": 66160,
+    "end": 66480,
+    "start_timestamp": "01:06",
+    "text": "Yeah.",
+    "japanese": "はい。"
+  },
+  {
+    "id": 23,
+    "start": 66480,
+    "end": 69520,
+    "start_timestamp": "01:06",
+    "text": "And I would like to know something that I should really go and see first.",
+    "japanese": "それで、真っ先に行くべき見どころを教えてほしいのですが。"
+  },
+  {
+    "id": 24,
+    "start": 70320,
+    "end": 85360,
+    "start_timestamp": "01:10",
+    "text": "Oh, the best thing about Münster is that it's a very historical, nice city, so you have a lot of churches and that stuff. So I would recommend you to go to the center of the city.",
+    "japanese": "ミュンスターの素晴らしいところは、とても歴史的で素敵な街であることです。教会などもたくさんあるので、まずは市中心部に行くことをおすすめします。"
+  },
+  {
+    "id": 25,
+    "start": 85360,
+    "end": 85860,
+    "start_timestamp": "01:25",
+    "text": "Yeah.",
+    "japanese": "ええ。"
+  },
+  {
+    "id": 26,
+    "start": 86770,
+    "end": 89280,
+    "start_timestamp": "01:26",
+    "text": "There's the Cathedral of Münster.",
+    "japanese": "ミュンスターの大聖堂（ドーム）があります。"
+  },
+  {
+    "id": 27,
+    "start": 89280,
+    "end": 89600,
+    "start_timestamp": "01:29",
+    "text": "Right.",
+    "japanese": "なるほど。"
+  },
+  {
+    "id": 28,
+    "start": 89600,
+    "end": 91520,
+    "start_timestamp": "01:29",
+    "text": "It's pretty famous.",
+    "japanese": "かなり有名ですよ。"
+  },
+  {
+    "id": 29,
+    "start": 91520,
+    "end": 98400,
+    "start_timestamp": "01:31",
+    "text": "Yeah, I think Münster is a typical student city, so you have several places you should visit.",
+    "japanese": "ミュンスターは典型的な学生の街だと思うので、訪れるべき場所がいくつかあります。"
+  },
+  {
+    "id": 30,
+    "start": 98400,
+    "end": 113280,
+    "start_timestamp": "01:38",
+    "text": "We have a lot of churches. There's a big church in the old town, so that is quite interesting. Then you also have the old town itself. It's quite interesting because it was reconstructed after World War II, so therefore it's really old-fashioned and...",
+    "japanese": "教会がたくさんあって、旧市街には大きな教会があるのでとても面白いです。それから旧市街自体も興味深く、第二次世界大戦後に再現された街並みはとても風情があります。"
+  },
+  {
+    "id": 31,
+    "start": 113280,
+    "end": 114400,
+    "start_timestamp": "01:53",
+    "text": "...nice for taking pictures.",
+    "japanese": "写真撮影にもぴったりですね。"
+  },
+  {
+    "id": 32,
+    "start": 114530,
+    "end": 117760,
+    "start_timestamp": "01:54",
+    "text": "Nice for taking pictures, and you'll also see some tourist spots there.",
+    "japanese": "写真映えしますし、観光スポットもいくつか見ることができます。"
+  },
+  {
+    "id": 33,
+    "start": 117760,
+    "end": 120560,
+    "start_timestamp": "01:57",
+    "text": "Could you tell me something I should really see here?",
+    "japanese": "ここで絶対に見ておくべきものを教えていただけますか？"
+  },
+  {
+    "id": 34,
+    "start": 120560,
+    "end": 123440,
+    "start_timestamp": "02:00",
+    "text": "Yeah, maybe I think you should start with sightseeing.",
+    "japanese": "そうですね、まずは観光から始めるのが良いと思います。"
+  },
+  {
+    "id": 35,
+    "start": 123440,
+    "end": 127760,
+    "start_timestamp": "02:03",
+    "text": "Like visit the Promenade, maybe go around the Prinzipalmarkt.",
+    "japanese": "プロムナードを訪れたり、プリンツィパルマルクトの周辺を散策したりするのもいいですね。"
+  },
+  {
+    "id": 36,
+    "start": 127760,
+    "end": 128240,
+    "start_timestamp": "02:07",
+    "text": "Ah, yeah.",
+    "japanese": "あ、いいですね。"
+  },
+  {
+    "id": 37,
+    "start": 128240,
+    "end": 133920,
+    "start_timestamp": "02:08",
+    "text": "And maybe visit the Aasee. It's very beautiful, you can have like a one-hour walk around the Aasee.",
+    "japanese": "それとアーゼー湖もおすすめです。とても綺麗で、湖の周りを1時間ほど散歩できます。"
+  },
+  {
+    "id": 38,
+    "start": 133920,
+    "end": 134400,
+    "start_timestamp": "02:13",
+    "text": "Okay.",
+    "japanese": "わかりました。"
+  },
+  {
+    "id": 39,
+    "start": 134400,
+    "end": 143120,
+    "start_timestamp": "02:14",
+    "text": "There are a lot of nice old churches too, like the St. Lamberti Church, and Domplatz is also pretty nice.",
+    "japanese": "聖ランベルティ教会のような素敵な古い教会もたくさんありますし、ドームプラッツ（大聖堂広場）もとても良いところです。"
+  },
+  {
+    "id": 40,
+    "start": 143250,
+    "end": 148560,
+    "start_timestamp": "02:23",
+    "text": "Münster is the biggest bishop's see in Germany.",
+    "japanese": "ミュンスターはドイツで最も大きな司教座の街の一つです。"
+  },
+  {
+    "id": 41,
+    "start": 148560,
+    "end": 149040,
+    "start_timestamp": "02:28",
+    "text": "Okay.",
+    "japanese": "なるほど。"
+  },
+  {
+    "id": 42,
+    "start": 149040,
+    "end": 152880,
+    "start_timestamp": "02:29",
+    "text": "And of course you must see the important churches, like the Cathedral.",
+    "japanese": "そしてもちろん、大聖堂などの重要な教会は見逃せません。"
+  },
+  {
+    "id": 43,
+    "start": 153440,
+    "end": 154320,
+    "start_timestamp": "02:33",
+    "text": "Yeah, this one here?",
+    "japanese": "ええ、これのことですか？"
+  },
+  {
+    "id": 44,
+    "start": 154320,
+    "end": 154800,
+    "start_timestamp": "02:34",
+    "text": "Yes.",
+    "japanese": "そうです。"
+  },
+  {
+    "id": 45,
+    "start": 154800,
+    "end": 155600,
+    "start_timestamp": "02:34",
+    "text": "Yeah.",
+    "japanese": "はい。"
+  },
+  {
+    "id": 46,
+    "start": 155600,
+    "end": 157200,
+    "start_timestamp": "02:35",
+    "text": "Very big building.",
+    "japanese": "とても大きな建物ですね。"
+  },
+  {
+    "id": 47,
+    "start": 157200,
+    "end": 157920,
+    "start_timestamp": "02:37",
+    "text": "Okay.",
+    "japanese": "なるほど。"
+  },
+  {
+    "id": 48,
+    "start": 157920,
+    "end": 159520,
+    "start_timestamp": "02:37",
+    "text": "The Lamberti Church.",
+    "japanese": "ランベルティ教会です。"
+  },
+  {
+    "id": 49,
+    "start": 159520,
+    "end": 160080,
+    "start_timestamp": "02:39",
+    "text": "This one here.",
+    "japanese": "ここですね。"
+  },
+  {
+    "id": 50,
+    "start": 160080,
+    "end": 164080,
+    "start_timestamp": "02:40",
+    "text": "With the ladder.",
+    "japanese": "はしごが付いているところです。"
+  },
+  {
+    "id": 51,
+    "start": 164080,
+    "end": 165360,
+    "start_timestamp": "02:44",
+    "text": "Oh yeah, with this ladder.",
+    "japanese": "ああ、このはしごがあるところですね。"
+  },
+  {
+    "id": 52,
+    "start": 165360,
+    "end": 167280,
+    "start_timestamp": "02:45",
+    "text": "It's a Stairway to Heaven, I think.",
+    "japanese": "天国への階段みたいなものですね。"
+  },
+  {
+    "id": 53,
+    "start": 167280,
+    "end": 168160,
+    "start_timestamp": "02:47",
+    "text": "From Led Zeppelin.",
+    "japanese": "レッド・ツェッペリンの曲みたいに。"
+  },
+  {
+    "id": 54,
+    "start": 168290,
+    "end": 178960,
+    "start_timestamp": "02:48",
+    "text": "Yes, it's modern art, and at night it's illuminated with yellow light. It's very nice.",
+    "japanese": "そうです、現代アートなんですよ。夜には黄色い光でライトアップされて、とても綺麗です。"
+  },
+  {
+    "id": 55,
+    "start": 186960,
+    "end": 197120,
+    "start_timestamp": "03:06",
+    "text": "Before we carry on with this week's episode, if you're someone who's looking to improve your confidence and fluency in speaking English, then look no further than our conversation membership.",
+    "japanese": "今週のエピソードを続ける前に、英語を話す自信と流暢さを高めたいと思っているなら、私たちの会話メンバーシップが最適です。"
+  },
+  {
+    "id": 56,
+    "start": 197800,
+    "end": 201360,
+    "start_timestamp": "03:17",
+    "text": "We're offering a seven-day free trial of our conversation membership.",
+    "japanese": "現在、会話メンバーシップの7日間無料体験を提供しています。"
+  },
+  {
+    "id": 57,
+    "start": 201360,
+    "end": 213520,
+    "start_timestamp": "03:21",
+    "text": "It's a place where you can come and meet other conversation members from all over the world, and also myself and Easy, where we're going to help you improve your confidence and fluency in speaking and understanding English.",
+    "japanese": "世界中のメンバーや私、そしてEasyと一緒に、英語を話したり理解したりする自信と流暢さを磨くことができる場所です。"
+  },
+  {
+    "id": 58,
+    "start": 213520,
+    "end": 227760,
+    "start_timestamp": "03:33",
+    "text": "Perhaps you're starting a new job soon, or you want to start a job that requires you to have a certain level of English to speak to native and non-native English speakers; then the conversation membership is a perfect fit for you.",
+    "japanese": "近々新しい仕事を始める方や、ネイティブ・非ネイティブ問わず英語でコミュニケーションをとる一定の英語力が求められる仕事に就きたい方にとって、このメンバーシップは最適です。"
+  },
+  {
+    "id": 59,
+    "start": 228400,
+    "end": 233440,
+    "start_timestamp": "03:48",
+    "text": "We create preset topics that we speak about for one hour in our Zoom-themed pub.",
+    "japanese": "あらかじめ用意したトピックについて、Zoom上のバーで1時間語り合います。"
+  },
+  {
+    "id": 60,
+    "start": 234000,
+    "end": 241430,
+    "start_timestamp": "03:54",
+    "text": "If this is something that interests you, then why don't you join our conversation membership with our seven-day free trial by going to easyenglish.video/membership?",
+    "japanese": "興味のある方は、easyenglish.video/membership から7日間の無料体験に参加してみてはいかがでしょうか？"
+  },
+  {
+    "id": 61,
+    "start": 241430,
+    "end": 242800,
+    "start_timestamp": "04:01",
+    "text": "video/membership.",
+    "japanese": "video/membership です。"
+  },
+  {
+    "id": 62,
+    "start": 243490,
+    "end": 251020,
+    "start_timestamp": "04:03",
+    "text": "We're looking forward to welcoming you into our online Zoom pub.",
+    "japanese": "オンラインZoomパブで皆さんをお迎えできるのを楽しみにしています。"
+  },
+  {
+    "id": 63,
+    "start": 251020,
+    "end": 253680,
+    "start_timestamp": "04:11",
+    "text": "Now back to the episode.",
+    "japanese": "それでは、エピソードの続きに参りましょう。"
+  },
+  {
+    "id": 64,
+    "start": 257840,
+    "end": 265390,
+    "start_timestamp": "04:17",
+    "text": "I'm pretty new to the city, like I'm here for one day and I would like good recommendations, but I'm a bit hungry.",
+    "japanese": "この街は初めてで1日だけ滞在するのですが、良いおすすめを知りたいです。ただ、少しお腹が空いていて。"
+  },
+  {
+    "id": 65,
+    "start": 265390,
+    "end": 269840,
+    "start_timestamp": "04:25",
+    "text": "Do you know any good places to get like typical German food or food from this area?",
+    "japanese": "典型的なドイツ料理や、この地域の料理を食べられる良いお店を知っていますか？"
+  },
+  {
+    "id": 66,
+    "start": 271410,
+    "end": 275810,
+    "start_timestamp": "04:31",
+    "text": "We've been to Krowamel today, so they have vegan food.",
+    "japanese": "今日「Krowamel」に行ってきたのですが、ヴィーガン料理がありましたよ。"
+  },
+  {
+    "id": 67,
+    "start": 275810,
+    "end": 277170,
+    "start_timestamp": "04:35",
+    "text": "Oh great, perfect.",
+    "japanese": "わあ、素晴らしい、完璧ですね。"
+  },
+  {
+    "id": 68,
+    "start": 277170,
+    "end": 282090,
+    "start_timestamp": "04:37",
+    "text": "I think it's not very traditional, but maybe it is.",
+    "japanese": "伝統的とは言えないかもしれませんが、そうかもしれません。"
+  },
+  {
+    "id": 69,
+    "start": 282090,
+    "end": 283120,
+    "start_timestamp": "04:42",
+    "text": "It's a nice concept.",
+    "japanese": "良いコンセプトですね。"
+  },
+  {
+    "id": 70,
+    "start": 283120,
+    "end": 287040,
+    "start_timestamp": "04:43",
+    "text": "Yeah, vegan fast food like kebab.",
+    "japanese": "ええ、ケバブのようなヴィーガンのファストフードです。"
+  },
+  {
+    "id": 71,
+    "start": 288000,
+    "end": 291040,
+    "start_timestamp": "04:48",
+    "text": "So I mean, it's kind of German food.",
+    "japanese": "ある意味、ドイツ料理のようなものですね。"
+  },
+  {
+    "id": 72,
+    "start": 291040,
+    "end": 293200,
+    "start_timestamp": "04:51",
+    "text": "Yeah, okay, nice.",
+    "japanese": "ええ、いいですね。"
+  },
+  {
+    "id": 73,
+    "start": 293200,
+    "end": 299360,
+    "start_timestamp": "04:53",
+    "text": "Maybe here are a lot of nice cafes where you could go just and grab a coffee.",
+    "japanese": "ここにはふらっと立ち寄ってコーヒーを飲めるような良いカフェがたくさんありますよ。"
+  },
+  {
+    "id": 74,
+    "start": 299490,
+    "end": 302080,
+    "start_timestamp": "04:59",
+    "text": "What's your favorite cafe that you go to?",
+    "japanese": "あなたのお気に入りのカフェはどこですか？"
+  },
+  {
+    "id": 75,
+    "start": 302080,
+    "end": 303730,
+    "start_timestamp": "05:02",
+    "text": "Just around the corner over there.",
+    "japanese": "そこを曲がったすぐのところにあります。"
+  },
+  {
+    "id": 76,
+    "start": 303730,
+    "end": 306910,
+    "start_timestamp": "05:03",
+    "text": "We've been there yesterday, actually, and it's called Moya.",
+    "japanese": "実は昨日行ったのですが、「Moya」というお店です。"
+  },
+  {
+    "id": 77,
+    "start": 306910,
+    "end": 308320,
+    "start_timestamp": "05:06",
+    "text": "Maybe you can stop by.",
+    "japanese": "寄ってみてもいいかもしれません。"
+  },
+  {
+    "id": 78,
+    "start": 308320,
+    "end": 309820,
+    "start_timestamp": "05:08",
+    "text": "Okay, it was great.",
+    "japanese": "とても良かったです。"
+  },
+  {
+    "id": 79,
+    "start": 309820,
+    "end": 310530,
+    "start_timestamp": "05:09",
+    "text": "Yeah, really good.",
+    "japanese": "ええ、本当に最高でした。"
+  },
+  {
+    "id": 80,
+    "start": 310530,
+    "end": 312570,
+    "start_timestamp": "05:10",
+    "text": "I'm not from Münster, but it was really great.",
+    "japanese": "私はミュンスター出身ではないのですが、本当に素晴らしかったです。"
+  },
+  {
+    "id": 81,
+    "start": 312570,
+    "end": 316940,
+    "start_timestamp": "05:12",
+    "text": "Yeah, you can go down the street, on the left side you've got like ARO.",
+    "japanese": "通りを進むと、左側に「ARO」という店があります。"
+  },
+  {
+    "id": 82,
+    "start": 316940,
+    "end": 323120,
+    "start_timestamp": "05:16",
+    "text": "It's a rice bowl place, you can eat there. And on Domplatz, you know, at the big church...",
+    "japanese": "ライスボウル（丼物）の店で食事ができます。それからドームプラッツ、あの大きな教会のある場所ですね..."
+  },
+  {
+    "id": 83,
+    "start": 323120,
+    "end": 323680,
+    "start_timestamp": "05:23",
+    "text": "Okay.",
+    "japanese": "はい。"
+  },
+  {
+    "id": 84,
+    "start": 323680,
+    "end": 326640,
+    "start_timestamp": "05:23",
+    "text": "...there is the local market every Wednesday.",
+    "japanese": "...毎週水曜日にローカルマーケットが開催されています。"
+  },
+  {
+    "id": 85,
+    "start": 326640,
+    "end": 329210,
+    "start_timestamp": "05:26",
+    "text": "Maybe you can eat something there.",
+    "japanese": "そこで何か食べることもできますよ。"
+  },
+  {
+    "id": 86,
+    "start": 329210,
+    "end": 330720,
+    "start_timestamp": "05:29",
+    "text": "And Saturday too.",
+    "japanese": "土曜日にもやっています。"
+  },
+  {
+    "id": 87,
+    "start": 330720,
+    "end": 332930,
+    "start_timestamp": "05:30",
+    "text": "Yeah, well remembered.",
+    "japanese": "そうそう、よく覚えてたね。"
+  },
+  {
+    "id": 88,
+    "start": 332930,
+    "end": 336830,
+    "start_timestamp": "05:32",
+    "text": "So we have like a local market here, also close to the old town.",
+    "japanese": "旧市街のすぐ近くにもローカルマーケットがあります。"
+  },
+  {
+    "id": 89,
+    "start": 336830,
+    "end": 341120,
+    "start_timestamp": "05:36",
+    "text": "There you'll find more typical German or Münster food.",
+    "japanese": "そこでは典型的なドイツ料理やミュンスターの名物が手に入ります。"
+  },
+  {
+    "id": 90,
+    "start": 341120,
+    "end": 347600,
+    "start_timestamp": "05:41",
+    "text": "Also typical Dutch food, because Münster is close to the border with the Netherlands.",
+    "japanese": "ミュンスターはオランダ国境にも近いので、オランダの伝統料理もありますよ。"
+  },
+  {
+    "id": 91,
+    "start": 347730,
+    "end": 352910,
+    "start_timestamp": "05:47",
+    "text": "Yeah, a lot of fabulous ice cream cafes.",
+    "japanese": "素晴らしいアイスクリームカフェもたくさんあります。"
+  },
+  {
+    "id": 92,
+    "start": 352910,
+    "end": 361710,
+    "start_timestamp": "05:52",
+    "text": "Italian ice cream, for example, behind the cathedral, near Überwasser Church.",
+    "japanese": "例えば大聖堂の後ろ、ウーバーヴァッサー教会の近くにあるイタリアンアイスクリームなどです。"
+  },
+  {
+    "id": 93,
+    "start": 361710,
+    "end": 363830,
+    "start_timestamp": "06:01",
+    "text": "Überwasser Church?",
+    "japanese": "ウーバーヴァッサー教会ですか？"
+  },
+  {
+    "id": 94,
+    "start": 363830,
+    "end": 370290,
+    "start_timestamp": "06:03",
+    "text": "Yes, there's on the right side a good Italian restaurant with an ice cream bar.",
+    "japanese": "そうです、その右側にアイスクリームバーのある良いイタリアンレストランがあります。"
+  },
+  {
+    "id": 95,
+    "start": 370290,
+    "end": 373200,
+    "start_timestamp": "06:10",
+    "text": "I often go to a bagel shop.",
+    "japanese": "私はよくベーグルショップに行きます。"
+  },
+  {
+    "id": 96,
+    "start": 373200,
+    "end": 377120,
+    "start_timestamp": "06:13",
+    "text": "It's near Hansaviertel.",
+    "japanese": "ハンザ地区（Hansaviertel）の近くです。"
+  },
+  {
+    "id": 97,
+    "start": 378400,
+    "end": 385970,
+    "start_timestamp": "06:18",
+    "text": "It's called Teilchen & Beschleuniger, and yeah, it's pretty cheap and you can meet a lot of locals there.",
+    "japanese": "「Teilchen & Beschleuniger」という店で、とても安く、たくさんの地元の人に出会えますよ。"
+  },
+  {
+    "id": 98,
+    "start": 385970,
+    "end": 388400,
+    "start_timestamp": "06:25",
+    "text": "Do you know this phrase 'hidden gems'?",
+    "japanese": "「穴場（hidden gems）」というフレーズを知っていますか？"
+  },
+  {
+    "id": 99,
+    "start": 388400,
+    "end": 389390,
+    "start_timestamp": "06:28",
+    "text": "Hidden gems?",
+    "japanese": "穴場ですか？"
+  },
+  {
+    "id": 100,
+    "start": 389390,
+    "end": 397240,
+    "start_timestamp": "06:29",
+    "text": "Like things that tourists would not know, that only people from Münster would know, that you don't normally tell tourists.",
+    "japanese": "観光客は知らず、ミュンスターの地元の人だけが知っているような、普通は観光客に教えない場所のことです。"
+  },
+  {
+    "id": 101,
+    "start": 397240,
+    "end": 415980,
+    "start_timestamp": "06:37",
+    "text": "There's an Israeli restaurant called Bonomé. It's a really cool food spot. A friend of mine, his uncle owns it. So it's not a typical German restaurant, more like an Israeli spot.",
+    "japanese": "「Bonomé」というイスラエル料理のレストランがあります。とてもクールな場所です。友達の叔父さんが経営しているんです。一般的なドイツ料理店ではなく、イスラエル料理のお店ですね。"
+  },
+  {
+    "id": 102,
+    "start": 415980,
+    "end": 417600,
+    "start_timestamp": "06:55",
+    "text": "Do you get mate's rates?",
+    "japanese": "友達割引はもらえるんですか？"
+  },
+  {
+    "id": 103,
+    "start": 417600,
+    "end": 421570,
+    "start_timestamp": "06:57",
+    "text": "Do you get a good deal because you know the owner?",
+    "japanese": "オーナーと知り合いだから安くなったりしますか？"
+  },
+  {
+    "id": 104,
+    "start": 421570,
+    "end": 422590,
+    "start_timestamp": "07:01",
+    "text": "Not yet.",
+    "japanese": "まだないですね。"
+  },
+  {
+    "id": 105,
+    "start": 422590,
+    "end": 431620,
+    "start_timestamp": "07:02",
+    "text": "When you have good weather, you can go to the canal in Münster.",
+    "japanese": "天気が良い日は、ミュンスターの運河に行くのがおすすめです。"
+  },
+  {
+    "id": 106,
+    "start": 431620,
+    "end": 442090,
+    "start_timestamp": "07:11",
+    "text": "It's normally for boats, but when the weather is good, you can just go swimming there all day.",
+    "japanese": "普段は船が行き交う場所ですが、天気が良い日は一日中泳ぐことができます。"
+  },
+  {
+    "id": 107,
+    "start": 442090,
+    "end": 444690,
+    "start_timestamp": "07:22",
+    "text": "For younger people, there's the Hansa area.",
+    "japanese": "若い人向けには、ハンザ地区があります。"
+  },
+  {
+    "id": 108,
+    "start": 444690,
+    "end": 445840,
+    "start_timestamp": "07:24",
+    "text": "Hey, I'm young!",
+    "japanese": "ちょっと、僕も若いですよ！"
+  },
+  {
+    "id": 109,
+    "start": 445840,
+    "end": 475760,
+    "start_timestamp": "07:25",
+    "text": "Yeah, there's like an area with a lot of bars and students, and maybe not-so-expensive bars. Around this area it's quite expensive because it's a tourist hotspot. If you go to different quarters, for example Hansaviertel, Wolbecker Straße, Warendorfer Straße, or Hammer Straße, there are hidden pubs that not everybody knows about.",
+    "japanese": "バーや学生が多くて、そこまで高くない店があるエリアです。この辺りは観光地なので高いですが、ハンザ地区、ヴォルベッカー通り、ヴァレンドルファー通り、ハマー通りなどの別のエリアに行けば、知る人ぞ知る隠れ家パブがありますよ。"
+  },
+  {
+    "id": 110,
+    "start": 475760,
+    "end": 481950,
+    "start_timestamp": "07:55",
+    "text": "What is the best way to get around Münster, like bus or train? Or do you have a subway or something?",
+    "japanese": "ミュンスターを移動するのに一番良い方法は何ですか？バスや電車、それとも地下鉄とかがありますか？"
+  },
+  {
+    "id": 111,
+    "start": 481950,
+    "end": 484080,
+    "start_timestamp": "08:01",
+    "text": "No, we don't have a subway.",
+    "japanese": "いいえ、地下鉄はありません。"
+  },
+  {
+    "id": 112,
+    "start": 484080,
+    "end": 496420,
+    "start_timestamp": "08:04",
+    "text": "The best way is by bike. We're famous for having a lot of bikes. I think we have the most bikes in all of Europe, and there are more bikes than people here. It's the best.",
+    "japanese": "自転車が一番です。ここは自転車が多いことで有名で、ヨーロッパ全体で最も自転車が多いと思いますし、人口よりも自転車の数の方が多いです。最高ですよ。"
+  },
+  {
+    "id": 113,
+    "start": 496420,
+    "end": 501200,
+    "start_timestamp": "08:16",
+    "text": "So you can rent a bike here for a day. I don't know how long you are here.",
+    "japanese": "ここなら1日レンタサイクルも利用できます。滞在期間は分かりませんが。"
+  },
+  {
+    "id": 114,
+    "start": 501200,
+    "end": 502650,
+    "start_timestamp": "08:21",
+    "text": "Should I take public transport?",
+    "japanese": "公共交通機関を使うべきでしょうか？"
+  },
+  {
+    "id": 115,
+    "start": 502650,
+    "end": 503350,
+    "start_timestamp": "08:22",
+    "text": "Should I walk?",
+    "japanese": "歩くべきでしょうか？"
+  },
+  {
+    "id": 116,
+    "start": 503350,
+    "end": 504210,
+    "start_timestamp": "08:23",
+    "text": "Should I drive?",
+    "japanese": "車を運転すべきでしょうか？"
+  },
+  {
+    "id": 117,
+    "start": 504210,
+    "end": 505040,
+    "start_timestamp": "08:24",
+    "text": "Maybe bike.",
+    "japanese": "たぶん自転車ですね。"
+  },
+  {
+    "id": 118,
+    "start": 506450,
+    "end": 507440,
+    "start_timestamp": "08:26",
+    "text": "Yeah, right. I got you.",
+    "japanese": "あ、なるほど。わかりました。"
+  },
+  {
+    "id": 119,
+    "start": 507440,
+    "end": 508810,
+    "start_timestamp": "08:27",
+    "text": "Okay, this is the best way.",
+    "japanese": "それが一番の方法なんですね。"
+  },
+  {
+    "id": 120,
+    "start": 508810,
+    "end": 511920,
+    "start_timestamp": "08:28",
+    "text": "Yeah, for sure, because in Münster there's the Promenade.",
+    "japanese": "間違いないです。ミュンスターにはプロムナードという場所がありますから。"
+  },
+  {
+    "id": 121,
+    "start": 511920,
+    "end": 521970,
+    "start_timestamp": "08:31",
+    "text": "It's like one big circuit around the city where you can just go by bike. It's kind of a fast lane for bikes without any traffic lights and stuff like that.",
+    "japanese": "街の周囲を囲む大きな周遊路で、自転車で走ることができます。信号などもなく、自転車専用の高速道路のようなものです。"
+  },
+  {
+    "id": 122,
+    "start": 521970,
+    "end": 533270,
+    "start_timestamp": "08:41",
+    "text": "Münster is quite small, so you should be able to walk around in like 30 minutes. But you can also catch a bus or hop on a bicycle, which is pretty common for Münster.",
+    "japanese": "ミュンスターはとてもコンパクトなので、30分も歩けば回れます。でもバスに乗ったり、自転車に乗ったりするのがミュンスターでは一般的ですよ。"
+  },
+  {
+    "id": 123,
+    "start": 533270,
+    "end": 536160,
+    "start_timestamp": "08:53",
+    "text": "Thank you so much for your help. Nice to meet you.",
+    "japanese": "助けていただき本当にありがとうございます。お会いできて良かったです。"
+  },
+  {
+    "id": 124,
+    "start": 536160,
+    "end": 538280,
+    "start_timestamp": "08:56",
+    "text": "Thank you so much, have a nice rest of your day.",
+    "japanese": "どうもありがとうございました。良い一日をお過ごしください。"
+  },
+  {
+    "id": 125,
+    "start": 538280,
+    "end": 539990,
+    "start_timestamp": "08:58",
+    "text": "Thank you very much.",
+    "japanese": "本当にありがとうございます。"
+  },
+  {
+    "id": 126,
+    "start": 539990,
+    "end": 540860,
+    "start_timestamp": "08:59",
+    "text": "You're welcome.",
+    "japanese": "どういたしまして。"
+  },
+  {
+    "id": 127,
+    "start": 540860,
+    "end": 542150,
+    "start_timestamp": "09:00",
+    "text": "Have a nice rest of your day.",
+    "japanese": "良い一日をお過ごしください。"
+  },
+  {
+    "id": 128,
+    "start": 542150,
+    "end": 543140,
+    "start_timestamp": "09:02",
+    "text": "You too, bye-bye.",
+    "japanese": "あなたもね、バイバイ。"
+  },
+  {
+    "id": 129,
+    "start": 543140,
+    "end": 544760,
+    "start_timestamp": "09:03",
+    "text": "Thank you for the recommendations.",
+    "japanese": "おすすめを教えてくれてありがとうございました。"
+  },
+  {
+    "id": 130,
+    "start": 544760,
+    "end": 545750,
+    "start_timestamp": "09:04",
+    "text": "Yeah, no problem.",
+    "japanese": "ええ、問題ないですよ。"
+  },
+  {
+    "id": 131,
+    "start": 545750,
+    "end": 547190,
+    "start_timestamp": "09:05",
+    "text": "All right, see you later, thank you.",
+    "japanese": "それでは、また。ありがとうございました。"
+  },
+  {
+    "id": 132,
+    "start": 547190,
+    "end": 548770,
+    "start_timestamp": "09:07",
+    "text": "Thank you very much for your help.",
+    "japanese": "助けていただいて本当にありがとうございました。"
+  },
+  {
+    "id": 133,
+    "start": 548770,
+    "end": 549920,
+    "start_timestamp": "09:08",
+    "text": "Yeah, nice to meet you.",
+    "japanese": "お会いできて良かったです。"
+  },
+  {
+    "id": 134,
+    "start": 549920,
+    "end": 551440,
+    "start_timestamp": "09:09",
+    "text": "Thank you as well.",
+    "japanese": "こちらこそありがとうございます。"
+  },
+  {
+    "id": 135,
+    "start": 551440,
+    "end": 553750,
+    "start_timestamp": "09:11",
+    "text": "Thank you for your time, have a nice rest of your day.",
+    "japanese": "お時間をいただきありがとうございました。良い一日をお過ごしください。"
+  },
+  {
+    "id": 136,
+    "start": 553750,
+    "end": 554410,
+    "start_timestamp": "09:13",
+    "text": "Thank you.",
+    "japanese": "ありがとうございます。"
+  },
+  {
+    "id": 137,
+    "start": 554410,
+    "end": 555460,
+    "start_timestamp": "09:14",
+    "text": "Thanks for helping me out.",
+    "japanese": "助けてくれてありがとうございました。"
+  },
+  {
+    "id": 138,
+    "start": 555460,
+    "end": 556230,
+    "start_timestamp": "09:15",
+    "text": "Yeah, no worries.",
+    "japanese": "ええ、気にしないで。"
+  },
+  {
+    "id": 139,
+    "start": 556230,
+    "end": 557280,
+    "start_timestamp": "09:16",
+    "text": "Nice to meet you guys.",
+    "japanese": "みんなに会えて良かったです。"
+  },
+  {
+    "id": 140,
+    "start": 557280,
+    "end": 557970,
+    "start_timestamp": "09:17",
+    "text": "Thanks a lot.",
+    "japanese": "本当にありがとう。"
+  },
+  {
+    "id": 141,
+    "start": 557970,
+    "end": 558970,
+    "start_timestamp": "09:17",
+    "text": "Nice to meet you too.",
+    "japanese": "こちらこそお会いできて良かったです。"
+  },
+  {
+    "id": 142,
+    "start": 558970,
+    "end": 559450,
+    "start_timestamp": "09:18",
+    "text": "Bye-bye.",
+    "japanese": "バイバイ。"
+  },
+  {
+    "id": 143,
+    "start": 559450,
+    "end": 560960,
+    "start_timestamp": "09:19",
+    "text": "Thanks for watching this week's episode.",
+    "japanese": "今週のエピソードをご視聴いただきありがとうございました。"
+  },
+  {
+    "id": 144,
+    "start": 560960,
+    "end": 570210,
+    "start_timestamp": "09:20",
+    "text": "Don't forget that if you want to improve your confidence speaking English, then join our conversation calls with a seven-day free trial. And as always, we'll see you next time.",
+    "japanese": "英語を話す自信をつけたい方は、7日間の無料体験で会話セッションに参加するのを忘れないでくださいね。それではいつものように、また次回お会いしましょう。"
+  },
+  {
+    "id": 145,
+    "start": 570210,
+    "end": 570800,
+    "start_timestamp": "09:30",
+    "text": "Ta-ra!",
+    "japanese": "じゃあね！"
+  },
+  {
+    "id": 146,
+    "start": 570800,
+    "end": 574970,
+    "start_timestamp": "09:30",
+    "text": "What's something that I should do when I'm in Germany or in Münster?",
+    "japanese": "ドイツやミュンスターにいるときにやるべきことって何ですか？"
+  },
+  {
+    "id": 147,
+    "start": 574970,
+    "end": 576480,
+    "start_timestamp": "09:34",
+    "text": "Something like a tradition, maybe?",
+    "japanese": "何か伝統的なこととかでしょうか？"
+  },
+  {
+    "id": 148,
+    "start": 577200,
+    "end": 578800,
+    "start_timestamp": "09:37",
+    "text": "Maybe what should we do?",
+    "japanese": "何をするのがいいかな？"
+  },
+  {
+    "id": 149,
+    "start": 578800,
+    "end": 582800,
+    "start_timestamp": "09:38",
+    "text": "Uh, Karibu or something.",
+    "japanese": "あー、カリブ（カフェ/バー）とかかな。"
+  }
+]
