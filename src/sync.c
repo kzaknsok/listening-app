@@ -1,13 +1,14 @@
 #include <emscripten.h>
 
-typedef struct {
+// __attribute__((packed)) を追加して、強制的に12バイト（4*3）で固定
+typedef struct __attribute__((packed)) {
     int id;
     int start_ms;
     int end_ms;
 } SubtitleItem;
 
 EMSCRIPTEN_KEEPALIVE
-int find_subtitle_id(SubtitleItem items[], int count, int current_ms) {
+int find_subtitle_id(const SubtitleItem items[], int count, int current_ms) {
     int low = 0;
     int high = count - 1;
 
@@ -15,7 +16,7 @@ int find_subtitle_id(SubtitleItem items[], int count, int current_ms) {
         int mid = low + (high - low) / 2;
 
         if (current_ms >= items[mid].start_ms && current_ms <= items[mid].end_ms) {
-            return items[mid].id; // 該当するIDを返却
+            return items[mid].id;
         }
         if (current_ms < items[mid].start_ms) {
             high = mid - 1;
@@ -24,5 +25,5 @@ int find_subtitle_id(SubtitleItem items[], int count, int current_ms) {
         }
     }
 
-    return -1; // 空白時間（該当字幕なし）
+    return -1;
 }
