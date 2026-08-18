@@ -8,7 +8,7 @@ Module.onRuntimeInitialized = async () => {
     wasmFindSubtitleId = Module.cwrap('find_subtitle_id', 'number', ['number', 'number', 'number']);
 
     // JSONデータの読み込み
-    const response = await fetch('/assets/script.json');
+    const response = await fetch('script.json');
     subtitlesData = await response.json();
 
     // C言語の構造体配列（SubtitleItem: int 3つ = 12バイト）用にメモリを確保
