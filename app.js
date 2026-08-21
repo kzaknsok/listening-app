@@ -13,12 +13,18 @@ const textJa = document.getElementById('text-ja');
 const langSelect = document.getElementById('lang-select');
 const contentSelect = document.getElementById('content-select');
 
-// 📚 コンテンツ定義（ベース名のみを管理する）
-const CONTENTS = [
-    { name: "Lesson 1: Basic English",       base: "easy_english_01" },
-    { name: "Lesson 2: Travel English",      base: "easy_english_02" },
-    { name: "Lesson 3: Daily Conversation",  base: "easy_english_03" }
+// 📚 利用可能なコンテンツのベース名（拡張子なしのファイル名一覧）
+const CONTENT_BASES = [
+    "easy_english_01",
+    "easy_english_02",
+    "easy_english_03"
 ];
+
+// ファイルパスや文字列から拡張子を除いたベース名を取得するヘルパー関数
+function getBaseName(path) {
+    const filename = path.split('/').pop(); // パスからファイル名部分を抽出
+    return filename.substring(0, filename.lastIndexOf('.')) || filename; // 拡張子を除去
+}
 
 // 字幕描画処理
 function renderSubtitle() {
@@ -108,13 +114,15 @@ async function loadContent(baseName) {
     }
 }
 
-// select 要素の option を動的生成する
+// select 要素の option をファイル名ベースで動的に生成する
 function populateContentSelect() {
     contentSelect.innerHTML = '';
-    CONTENTS.forEach(item => {
+    CONTENT_BASES.forEach(rawPath => {
+        const baseName = getBaseName(rawPath); // 拡張子なしのベース名を取得
+        
         const opt = document.createElement('option');
-        opt.value = item.base;
-        opt.textContent = item.name;
+        opt.value = baseName;
+        opt.textContent = baseName; // 表示用テキストにも拡張子抜きのベース名を設定
         contentSelect.appendChild(opt);
     });
 }
@@ -124,12 +132,13 @@ const initWasm = async () => {
     try {
         wasmFindSubtitleId = Module.cwrap('find_subtitle_id', 'number', ['pointer', 'number', 'number']);
 
-        // 1. ドロップダウン肢の初期化
+        // 1. ドロップダウン選択肢の動的生成
         populateContentSelect();
 
         // 2. 先頭のコンテンツをロード
-        if (CONTENTS.length > 0) {
-            await loadContent(CONTENTS[0].base);
+        if (CONTENT_BASES.length > 0) {
+            const firstBase = getBaseName(CONTENT_BASES[0]);
+            await loadContent(firstBase);
         }
 
     } catch (err) {
