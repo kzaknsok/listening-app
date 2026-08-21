@@ -24,10 +24,18 @@ jobs:
             -s EXPORTED_RUNTIME_METHODS='["ccall","cwrap","setValue"]' \
             -o web/sync.js
 
-      # 2. アセットファイルを web フォルダにコピー
-      - name: Copy Assets
+      # 2. アセットファイルのコピー & manifest.json の自動生成
+      - name: Copy Assets and Generate Manifest
         run: |
-          cp assets/* web/
+          cp -r assets/* web/
+          cd web
+          # mp3 と json の両方が揃っているベース名のみを抽出して manifest.json に保存
+          for f in *.json; do
+            base="${f%.json}"
+            if [ -f "${base}.mp3" ] && [ "$base" != "manifest" ]; then
+              echo "$base"
+            fi
+          done | jq -R . | jq -s . > manifest.json
 
       # 3. GitHub Pages へデプロイ
       - name: Deploy to GitHub Pages
