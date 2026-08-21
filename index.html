@@ -39,7 +39,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 背景に配置するガラス透過用のアンビエント背景（光の玉） */
         .glass-bg-orb-1 {
             position: fixed;
             top: 15%;
@@ -76,7 +75,6 @@
             100% { transform: translate(-30px, 40px) scale(1.15); }
         }
 
-        /* ヘッダーエリア */
         .header-tag {
             display: inline-flex;
             align-items: center;
@@ -113,7 +111,6 @@
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
 
-        /* 透明感を極めたクリスタルガラスカード */
         .card { 
             width: 100%;
             background: rgba(255, 255, 255, 0.03); 
@@ -130,7 +127,6 @@
             overflow: hidden;
         }
 
-        /* オーディオプレイヤー */
         audio { 
             width: 100%; 
             margin-bottom: 24px; 
@@ -144,7 +140,6 @@
             opacity: 1;
         }
 
-        /* コントロール（言語切替・コンテンツ切替） */
         .controls { 
             margin-bottom: 24px; 
             display: flex; 
@@ -184,7 +179,6 @@
             border-color: rgba(255, 255, 255, 0.4);
         }
 
-        /* 字幕表示ボックス（内側のレイヤーガラス） */
         .subtitle-box { 
             min-height: 190px; 
             padding: 32px 24px; 
@@ -223,7 +217,6 @@
             text-shadow: 0 1px 8px rgba(0,0,0,0.5);
         }
 
-        /* レスポンシブ対応 */
         @media (max-width: 600px) {
             body { padding: 16px 10px; }
             .card { padding: 24px 18px; border-radius: 20px; }
@@ -237,7 +230,6 @@
 </head>
 <body>
 
-    <!-- ガラス背景を引き立てるネオン光オーブ -->
     <div class="glass-bg-orb-1"></div>
     <div class="glass-bg-orb-2"></div>
 
@@ -245,19 +237,13 @@
         <div class="header-tag">Local WASM Engine</div>
         <h1>Intelligence Subtitle Sync</h1>
 
-        <!-- src属性は app.js から動的にセットされるため削除 -->
         <audio id="audio-player" controls></audio>
 
         <div class="controls">
-            <!-- コンテンツ切り替え用セレクト -->
             <label for="content-select">Content</label>
-            <select id="content-select">
-                <option value="lesson1">Lesson 1: Basic English</option>
-                <option value="lesson2">Lesson 2: Travel English</option>
-                <option value="lesson3">Lesson 3: Daily Conversation</option>
-            </select>
+            <!-- app.js の populateContentSelect() によって動的にオプションが生成されます -->
+            <select id="content-select"></select>
 
-            <!-- 言語表示切替用セレクト -->
             <label for="lang-select">Display Mode</label>
             <select id="lang-select">
                 <option value="both">English + Japanese</option>
@@ -272,15 +258,10 @@
         </div>
     </div>
 
-    <!-- 1. WASM初期化オブジェクトの事前定義 -->
     <script>
         var Module = Module || {};
     </script>
-
-    <!-- 2. WASMグルーコード -->
     <script src="sync.js"></script>
-
-    <!-- 3. メイン処理スクリプト -->
     <script src="app.js"></script>
 </body>
 </html>
