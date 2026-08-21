@@ -13,17 +13,31 @@ const textJa = document.getElementById('text-ja');
 const langSelect = document.getElementById('lang-select');
 const contentSelect = document.getElementById('content-select');
 
-// 📚 利用可能なコンテンツのベース名（拡張子なしのファイル名一覧）
-const CONTENT_BASES = [
-    "easy_english_01",
-    "easy_english_02",
-    "easy_english_03"
-];
+// 📜 CIで生成された manifest.json から存在するコンテンツ一覧を取得
+async function fetchManifest() {
+    try {
+        const response = await fetch('manifest.json');
+        if (!response.ok) throw new Error('Manifest not found');
+        return await response.json();
+    } catch (err) {
+        console.warn('Failed to load manifest.json, falling back to default.', err);
+        return ['easy_english_01']; // フォールバック
+    }
+}
 
-// ファイルパスや文字列から拡張子を除いたベース名を取得するヘルパー関数
-function getBaseName(path) {
-    const filename = path.split('/').pop(); // パスからファイル名部分を抽出
-    return filename.substring(0, filename.lastIndexOf('.')) || filename; // 拡張子を除去
+// ドロップダウンを動的に構築
+async function populateContentSelect() {
+    contentSelect.innerHTML = '';
+    const bases = await fetchManifest();
+
+    bases.forEach(base => {
+        const opt = document.createElement('option');
+        opt.value = base;
+        opt.textContent = base;
+        contentSelect.appendChild(opt);
+    });
+
+    return bases;
 }
 
 // 字幕描画処理
@@ -36,7 +50,7 @@ function renderSubtitle() {
     const activeId = wasmFindSubtitleId(structBufferPtr, subtitlesData.length, currentMs);
 
     if (activeId !== -1) {
-        const item = subtitlesMap.get(activeId); // MapからO(1)で高速取得
+        const item = subtitlesMap.get(activeId);
         if (item) {
             const mode = langSelect.value;
             textEn.textContent = (mode === 'both' || mode === 'en') ? item.text : '';
@@ -49,18 +63,16 @@ function renderSubtitle() {
     textJa.textContent = '';
 }
 
-// レンダリングループ（停止しない安全構造）
+// レンダリングループ
 function animationLoop() {
     if (audio.paused || audio.ended) {
         isLoopRunning = false;
         return;
     }
-
     renderSubtitle();
     requestAnimationFrame(animationLoop);
 }
 
-// ループ開始関数（多重起動を防止）
 function startLoop() {
     if (!isLoopRunning) {
         isLoopRunning = true;
@@ -68,18 +80,19 @@ function startLoop() {
     }
 }
 
-// 🔄 コンテンツ読み込み処理（ベース名から .mp3 と .json を自動生成）
+// 🔄 コンテンツ読み込み処理
 async function loadContent(baseName) {
-    const audioPath = `assets/${baseName}.mp3`;
-    const jsonPath  = `assets/${baseName}.json`;
+    if (!baseName) return;
 
-    // 1. 音声を停止してソースを変更
+    // web ディレクトリ直下に配置されたアセットを参照
+    const audioPath = `${baseName}.mp3`;
+    const jsonPath  = `${baseName}.json`;
+
     audio.pause();
     audio.src = audioPath;
     audio.load();
 
     try {
-        // 2. 対応する JSON データを取得
         const response = await fetch(jsonPath);
         if (!response.ok) throw new Error(`HTTP Error: ${response.status} (${jsonPath})`);
         
@@ -87,17 +100,15 @@ async function loadContent(baseName) {
         subtitlesMap.clear();
         subtitlesData.forEach(item => subtitlesMap.set(item.id, item));
 
-        // 3. 古い WASM メモリ領域の解放（メモリリーク防止）
+        // メモリ解放と再確保
         if (structBufferPtr !== null) {
             Module._free(structBufferPtr);
             structBufferPtr = null;
         }
 
-        // 4. 新しいデータ数に合わせて C 言語領域（12バイト/件）を確保
         const ITEM_SIZE = 12; 
         structBufferPtr = Module._malloc(subtitlesData.length * ITEM_SIZE);
 
-        // 5. C 言語のメモリへ構造体データを展開
         subtitlesData.forEach((item, index) => {
             const offset = structBufferPtr + index * ITEM_SIZE;
             Module.setValue(offset, item.id, 'i32');
@@ -106,25 +117,12 @@ async function loadContent(baseName) {
         });
 
         console.log(`Loaded content successfully: ${baseName}`);
-        
-        // 字幕の初期描画
         renderSubtitle();
     } catch (err) {
         console.error('Failed to load content:', err);
+        textEn.textContent = 'ファイルの読み込みに失敗しました。';
+        textJa.textContent = '';
     }
-}
-
-// select 要素の option をファイル名ベースで動的に生成する
-function populateContentSelect() {
-    contentSelect.innerHTML = '';
-    CONTENT_BASES.forEach(rawPath => {
-        const baseName = getBaseName(rawPath); // 拡張子なしのベース名を取得
-        
-        const opt = document.createElement('option');
-        opt.value = baseName;
-        opt.textContent = baseName; // 表示用テキストにも拡張子抜きのベース名を設定
-        contentSelect.appendChild(opt);
-    });
 }
 
 // 初期化処理
@@ -132,13 +130,13 @@ const initWasm = async () => {
     try {
         wasmFindSubtitleId = Module.cwrap('find_subtitle_id', 'number', ['pointer', 'number', 'number']);
 
-        // 1. ドロップダウン選択肢の動的生成
-        populateContentSelect();
+        const validBases = await populateContentSelect();
 
-        // 2. 先頭のコンテンツをロード
-        if (CONTENT_BASES.length > 0) {
-            const firstBase = getBaseName(CONTENT_BASES[0]);
-            await loadContent(firstBase);
+        if (validBases.length > 0) {
+            await loadContent(validBases[0]);
+        } else {
+            textEn.textContent = '利用可能なコンテンツがありません。';
+            textJa.textContent = '';
         }
 
     } catch (err) {
@@ -146,14 +144,14 @@ const initWasm = async () => {
     }
 };
 
-// 初期化タイミングの安全策
+// 初期化タイミング
 if (typeof Module !== 'undefined' && Module.calledRun) {
     initWasm();
 } else {
     Module.onRuntimeInitialized = initWasm;
 }
 
-// イベント設定
+// イベントリスナー
 audio.addEventListener('play', startLoop);
 audio.addEventListener('playing', startLoop);
 audio.addEventListener('seeked', renderSubtitle);
@@ -162,7 +160,6 @@ audio.addEventListener('timeupdate', renderSubtitle);
 
 langSelect.addEventListener('change', renderSubtitle);
 
-// コンテンツ切り替えイベント
 contentSelect.addEventListener('change', (e) => {
     loadContent(e.target.value);
 });
