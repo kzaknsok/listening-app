@@ -144,7 +144,7 @@
             opacity: 1;
         }
 
-        /* コントロール（言語切替） */
+        /* コントロール（言語切替・コンテンツ切替） */
         .controls { 
             margin-bottom: 24px; 
             display: flex; 
@@ -245,9 +245,19 @@
         <div class="header-tag">Local WASM Engine</div>
         <h1>Intelligence Subtitle Sync</h1>
 
-        <audio id="audio-player" controls src="easy_english_01.mp3"></audio>
+        <!-- src属性は app.js から動的にセットされるため削除 -->
+        <audio id="audio-player" controls></audio>
 
         <div class="controls">
+            <!-- コンテンツ切り替え用セレクト -->
+            <label for="content-select">Content</label>
+            <select id="content-select">
+                <option value="lesson1">Lesson 1: Basic English</option>
+                <option value="lesson2">Lesson 2: Travel English</option>
+                <option value="lesson3">Lesson 3: Daily Conversation</option>
+            </select>
+
+            <!-- 言語表示切替用セレクト -->
             <label for="lang-select">Display Mode</label>
             <select id="lang-select">
                 <option value="both">English + Japanese</option>
@@ -267,7 +277,7 @@
         var Module = Module || {};
     </script>
 
-    <!-- 2. WASMグルーコード（※生成された実際のJSファイル名に変更してください） -->
+    <!-- 2. WASMグルーコード -->
     <script src="sync.js"></script>
 
     <!-- 3. メイン処理スクリプト -->
