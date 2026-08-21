@@ -2,6 +2,8 @@ let subtitlesData = [];
 let subtitlesMap = new Map();
 let wasmFindSubtitleId = null;
 let structBufferPtr = null;
+
+// ループ管理用フラグ
 let isLoopRunning = false;
 
 // UI要素
@@ -11,30 +13,20 @@ const textJa = document.getElementById('text-ja');
 const langSelect = document.getElementById('lang-select');
 const contentSelect = document.getElementById('content-select');
 
-// 📚 コンテンツ定義一覧（ファイルパスを環境に合わせて変更してください）
-const CONTENTS = {
-    lesson1: {
-        audio: 'audio/easy_english_01.mp3',
-        json: 'data/script_01.json'
-    },
-    lesson2: {
-        audio: 'audio/easy_english_02.mp3',
-        json: 'data/script_02.json'
-    },
-    lesson3: {
-        audio: 'audio/easy_english_03.mp3',
-        json: 'data/script_03.json'
-    }
-};
+// 📚 コンテンツ定義（ベース名のみを管理する）
+const CONTENTS = [
+    { name: "Lesson 1: Basic English",       base: "easy_english_01" },
+    { name: "Lesson 2: Travel English",      base: "easy_english_02" },
+    { name: "Lesson 3: Daily Conversation",  base: "easy_english_03" }
+];
 
 // 字幕描画処理
 function renderSubtitle() {
     if (!wasmFindSubtitleId || !structBufferPtr || subtitlesData.length === 0) return;
 
-    // 音声の現在位置（ミリ秒）を取得
     const currentMs = Math.floor(audio.currentTime * 1000);
 
-    // C言語関数（WASM）の呼び出し
+    // C言語関数の呼び出し
     const activeId = wasmFindSubtitleId(structBufferPtr, subtitlesData.length, currentMs);
 
     if (activeId !== -1) {
@@ -51,7 +43,7 @@ function renderSubtitle() {
     textJa.textContent = '';
 }
 
-// レンダリングループ
+// レンダリングループ（停止しない安全構造）
 function animationLoop() {
     if (audio.paused || audio.ended) {
         isLoopRunning = false;
@@ -62,7 +54,7 @@ function animationLoop() {
     requestAnimationFrame(animationLoop);
 }
 
-// ループ開始関数（多重起動防止）
+// ループ開始関数（多重起動を防止）
 function startLoop() {
     if (!isLoopRunning) {
         isLoopRunning = true;
@@ -70,20 +62,20 @@ function startLoop() {
     }
 }
 
-// 🔄 コンテンツの動的読み込み処理
-async function loadContent(contentKey) {
-    const target = CONTENTS[contentKey];
-    if (!target) return;
+// 🔄 コンテンツ読み込み処理（ベース名から .mp3 と .json を自動生成）
+async function loadContent(baseName) {
+    const audioPath = `assets/${baseName}.mp3`;
+    const jsonPath  = `assets/${baseName}.json`;
 
-    // 1. 音声を停止してソースを差し替え
+    // 1. 音声を停止してソースを変更
     audio.pause();
-    audio.src = target.audio;
+    audio.src = audioPath;
     audio.load();
 
     try {
-        // 2. 新しい JSON データの取得
-        const response = await fetch(target.json);
-        if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+        // 2. 対応する JSON データを取得
+        const response = await fetch(jsonPath);
+        if (!response.ok) throw new Error(`HTTP Error: ${response.status} (${jsonPath})`);
         
         subtitlesData = await response.json();
         subtitlesMap.clear();
@@ -107,22 +99,38 @@ async function loadContent(contentKey) {
             Module.setValue(offset + 8, item.end, 'i32');
         });
 
-        console.log(`Content loaded successfully: ${contentKey}`);
+        console.log(`Loaded content successfully: ${baseName}`);
         
-        // 字幕表示の即時更新
+        // 字幕の初期描画
         renderSubtitle();
     } catch (err) {
         console.error('Failed to load content:', err);
     }
 }
 
-// WASM 初期化処理
+// select 要素の option を動的生成する
+function populateContentSelect() {
+    contentSelect.innerHTML = '';
+    CONTENTS.forEach(item => {
+        const opt = document.createElement('option');
+        opt.value = item.base;
+        opt.textContent = item.name;
+        contentSelect.appendChild(opt);
+    });
+}
+
+// 初期化処理
 const initWasm = async () => {
     try {
         wasmFindSubtitleId = Module.cwrap('find_subtitle_id', 'number', ['pointer', 'number', 'number']);
 
-        // 初期選択されているコンテンツを読み込む
-        await loadContent(contentSelect.value);
+        // 1. ドロップダウン肢の初期化
+        populateContentSelect();
+
+        // 2. 先頭のコンテンツをロード
+        if (CONTENTS.length > 0) {
+            await loadContent(CONTENTS[0].base);
+        }
 
     } catch (err) {
         console.error('Initialization failed:', err);
@@ -136,7 +144,7 @@ if (typeof Module !== 'undefined' && Module.calledRun) {
     Module.onRuntimeInitialized = initWasm;
 }
 
-// イベントリスナーの設定
+// イベント設定
 audio.addEventListener('play', startLoop);
 audio.addEventListener('playing', startLoop);
 audio.addEventListener('seeked', renderSubtitle);
