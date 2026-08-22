@@ -1,0 +1,698 @@
+[
+  {
+    "id": 1,
+    "start": 60,
+    "end": 9840,
+    "start_timestamp": "01:00",
+    "text": "Hi ya, welcome to Easy English, our channel helping you learn authentic English how it's truly spoken in everyday conversations.",
+    "japanese": "こんにちは、イージー・イングリッシュへようこそ。このチャンネルでは、日常会話で実際に使われている本物の英語を学ぶお手伝いをしています。"
+  },
+  {
+    "id": 2,
+    "start": 9840,
+    "end": 19380,
+    "start_timestamp": "02:44",
+    "text": "We show you everyday conversations. We help you with our videos on our YouTube channel, on Instagram, and with our podcast that you can find on any podcast app.",
+    "japanese": "日常会話をお見せしたり、YouTubeチャンネルやInstagramの動画、そして主要なポッドキャストアプリで聴けるポッドキャストを通じて皆さんをサポートしています。"
+  },
+  {
+    "id": 3,
+    "start": 19380,
+    "end": 30640,
+    "start_timestamp": "05:23",
+    "text": "I'm Mitch, and as a native speaker, I really want to show you the authenticity of English speakers in the city of Brighton, a place surrounded by the most eccentric and fun people in the world.",
+    "japanese": "僕はミッチです。ネイティブスピーカーとして、世界一奇抜で楽しい人々に囲まれた街、ブライトンのリアルな英語をお伝えしたいと思っています。"
+  },
+  {
+    "id": 4,
+    "start": 30640,
+    "end": 41360,
+    "start_timestamp": "08:30",
+    "text": "I want to show you the more authentic parts of the English language and culture—the way people really speak with slang, grammatical errors, swearing, accents, and dialects.",
+    "japanese": "スラングや文法的な間違い、俗語、アクセント、方言など、人々が実際に話す生の英語と文化をお見せしたいです。"
+  },
+  {
+    "id": 5,
+    "start": 41360,
+    "end": 42360,
+    "start_timestamp": "11:29",
+    "text": "You want to tell the story?",
+    "japanese": "君がその話をする？"
+  },
+  {
+    "id": 6,
+    "start": 42360,
+    "end": 44560,
+    "start_timestamp": "11:43",
+    "text": "You tell the story. I always tell the story.",
+    "japanese": "君が話してよ。いつも僕が話してるんだから。"
+  },
+  {
+    "id": 7,
+    "start": 44560,
+    "end": 47080,
+    "start_timestamp": "12:22",
+    "text": "Be confident. Confidence is sexy.",
+    "japanese": "自信を持って。自信があるのって魅力的なんだよ。"
+  },
+  {
+    "id": 8,
+    "start": 47080,
+    "end": 48200,
+    "start_timestamp": "13:04",
+    "text": "What's the Wetherspoon?",
+    "japanese": "ウェザースプーン（※イギリスのパブチェーン）って何？"
+  },
+  {
+    "id": 9,
+    "start": 48200,
+    "end": 50920,
+    "start_timestamp": "13:23",
+    "text": "So it's not a question.",
+    "japanese": "だから、質問じゃないんだよ。"
+  },
+  {
+    "id": 10,
+    "start": 50920,
+    "end": 52600,
+    "start_timestamp": "14:09",
+    "text": "Take the risk, that's it.",
+    "japanese": "リスクを取る、ただそれだけ。"
+  },
+  {
+    "id": 11,
+    "start": 52600,
+    "end": 54280,
+    "start_timestamp": "14:36",
+    "text": "Do you have to drink in a pub?",
+    "japanese": "パブで飲まなきゃいけないんですか？"
+  },
+  {
+    "id": 12,
+    "start": 54380,
+    "end": 61880,
+    "start_timestamp": "15:06",
+    "text": "No, you haven't got to drink in a pub. I mean, I drink at home as well.",
+    "japanese": "ううん、パブで飲む必要はないよ。僕だって家でも飲むしね。"
+  },
+  {
+    "id": 13,
+    "start": 61880,
+    "end": 65440,
+    "start_timestamp": "17:11",
+    "text": "People in the UK like, take tea very seriously.",
+    "japanese": "イギリスの人たちは、お茶に対してすごく真剣なんだよね。"
+  },
+  {
+    "id": 14,
+    "start": 65440,
+    "end": 69680,
+    "start_timestamp": "18:10",
+    "text": "You're so amazing, and I don't know, you don't really seem to know it that much.",
+    "japanese": "君はすごく素敵な人なのに、なんだか自分ではあまり気づいてないみたいだね。"
+  },
+  {
+    "id": 15,
+    "start": 69680,
+    "end": 72960,
+    "start_timestamp": "19:21",
+    "text": "After our first date, we were kind of like, together.",
+    "japanese": "初デートの後、私たちは付き合っているような感じになったんです。"
+  },
+  {
+    "id": 16,
+    "start": 72960,
+    "end": 75480,
+    "start_timestamp": "20:16",
+    "text": "I love Brighton. It's a lovely place.",
+    "japanese": "ブライトンが大好きです。とても素敵な場所ですよ。"
+  },
+  {
+    "id": 17,
+    "start": 75480,
+    "end": 78040,
+    "start_timestamp": "20:58",
+    "text": "Why don't you put that down and pick that up and have a go?",
+    "japanese": "それを下に置いて、あっちを取って試してみたら？"
+  },
+  {
+    "id": 18,
+    "start": 78040,
+    "end": 96920,
+    "start_timestamp": "21:40",
+    "text": "I'm Izzy, and I came to England seven years ago. I know what the struggles are to really dive into a language, to be able to go to a store or a pub and understand how people really speak, and to be comfortable enough with the language to actually open up and speak to people.",
+    "japanese": "私はイジーです。7年前にイギリスに来たので、新しい言語に飛び込むことの大変さはよく分かります。お店やパブに行って、人々の生の会話を理解し、不安なく心を開いて会話できるようになるまでの苦労を知っています。"
+  },
+  {
+    "id": 19,
+    "start": 96920,
+    "end": 101180,
+    "start_timestamp": "26:55",
+    "text": "So we want to help you exactly with that, with everyday conversations.",
+    "japanese": "だからこそ、私たちはまさにその日常会話の部分で皆さんをサポートしたいと考えています。"
+  },
+  {
+    "id": 20,
+    "start": 101180,
+    "end": 108460,
+    "start_timestamp": "28:06",
+    "text": "We want to show you how people really speak, but also help you to be the one that will go out and speak to people.",
+    "japanese": "人々が実際にどう話すかをお見せするだけでなく、皆さんが自分から外に出て人と話せるよう手助けしたいと思っています。"
+  },
+  {
+    "id": 21,
+    "start": 108460,
+    "end": 110720,
+    "start_timestamp": "30:07",
+    "text": "Can you tell me what you're up to today in Brighton?",
+    "japanese": "今日ブライトンで何をする予定か教えてもらえますか？"
+  },
+  {
+    "id": 22,
+    "start": 110820,
+    "end": 118040,
+    "start_timestamp": "30:47",
+    "text": "What would you say is the other person's best quality? Is it fair to say that you two are best friends?",
+    "japanese": "お互いの1番良いところは何だと思いますか？お二人は親友と言ってもいいですか？"
+  },
+  {
+    "id": 23,
+    "start": 118040,
+    "end": 119040,
+    "start_timestamp": "32:47",
+    "text": "Yes!",
+    "japanese": "はい！"
+  },
+  {
+    "id": 24,
+    "start": 119040,
+    "end": 120040,
+    "start_timestamp": "33:04",
+    "text": "BFFs?",
+    "japanese": "ズッ友？"
+  },
+  {
+    "id": 25,
+    "start": 120040,
+    "end": 122380,
+    "start_timestamp": "33:20",
+    "text": "Yeah, BFFs, totally.",
+    "japanese": "うん、間違いなく親友だよ。"
+  },
+  {
+    "id": 26,
+    "start": 122380,
+    "end": 127480,
+    "start_timestamp": "33:59",
+    "text": "For those of you who are beginners, we also have our Slow Easy English videos.",
+    "japanese": "初心者の方のために、ゆっくり話す「Slow Easy English」の動画も用意しています。"
+  },
+  {
+    "id": 27,
+    "start": 127480,
+    "end": 135840,
+    "start_timestamp": "35:24",
+    "text": "We want you to learn and improve your English vocabulary and pronunciation in a fun way, for beginner to intermediate learners.",
+    "japanese": "初級から中級の学習者が、語彙や発音を楽しく学んで上達できるようにしたいと思っています。"
+  },
+  {
+    "id": 28,
+    "start": 135940,
+    "end": 144000,
+    "start_timestamp": "37:45",
+    "text": "With our Super Easy English playlist, we give you slower conversations for different everyday scenarios.",
+    "japanese": "「Super Easy English」プレイリストでは、さまざまな日常の場面に合わせたゆっくりした会話をお届けしています。"
+  },
+  {
+    "id": 29,
+    "start": 144000,
+    "end": 152200,
+    "start_timestamp": "40:00",
+    "text": "Alongside our videos showing you the authentic English language, we also have a podcast which is going to show you a little insight into British culture.",
+    "japanese": "リアルな英語を紹介する動画のほかに、イギリス文化を少し覗き見できるポッドキャストも配信しています。"
+  },
+  {
+    "id": 30,
+    "start": 152200,
+    "end": 158720,
+    "start_timestamp": "42:16",
+    "text": "Our podcast is available on your podcast app and sometimes as a video podcast on our YouTube channel.",
+    "japanese": "ポッドキャストはお使いのポッドキャストアプリで聴けますし、時々YouTubeチャンネルでビデオポッドキャストとしても配信しています。"
+  },
+  {
+    "id": 31,
+    "start": 158720,
+    "end": 164520,
+    "start_timestamp": "44:05",
+    "text": "Izzy and I regularly sit down to chat and discuss the weird and wonderful parts of British culture.",
+    "japanese": "イジーと僕は定期的に座って話し合い、イギリス文化の奇妙で素晴らしい部分について語り合っています。"
+  },
+  {
+    "id": 32,
+    "start": 164570,
+    "end": 170600,
+    "start_timestamp": "45:42",
+    "text": "We'll deep dive into the specifics of British behaviour, traditions, taboos, phrases, and slang.",
+    "japanese": "イギリス人の行動習慣や伝統、タブー、フレーズ、スラングの細かい部分まで深く掘り下げていきます。"
+  },
+  {
+    "id": 33,
+    "start": 170600,
+    "end": 182760,
+    "start_timestamp": "47:23",
+    "text": "We'll compare experiences from our two different perspectives as a native Brit and a German expat, and discuss regular pop culture topics to give you the lowdown on what it's like living in the UK.",
+    "japanese": "生粋のイギリス人とドイツ人海外移住者という2つの異なる視点からの体験を比較し、最新のポップカルチャーの話題を取り上げながら、イギリス生活のリアルな情報をお伝えします。"
+  },
+  {
+    "id": 34,
+    "start": 182760,
+    "end": 190120,
+    "start_timestamp": "50:46",
+    "text": "We also give you the chance to write to us, and we'll answer all of your questions in our regular topic of unhelpful advice.",
+    "japanese": "また、皆さんからのお便りも募集しており、恒例の「役に立たないアドバイス」コーナーで質問にお答えします。"
+  },
+  {
+    "id": 35,
+    "start": 190180,
+    "end": 196440,
+    "start_timestamp": "52:49",
+    "text": "Our podcast is here to help you feel like you can fit in and integrate into the English-speaking world.",
+    "japanese": "私たちのポッドキャストは、皆さんが英語圏の世界に馴染み、溶け込めるようサポートするためのものです。"
+  },
+  {
+    "id": 36,
+    "start": 196440,
+    "end": 203080,
+    "start_timestamp": "54:34",
+    "text": "If you want to take your English to the next level or just help support mine and Izzy's work, then you can.",
+    "japanese": "英語力を次のレベルに引き上げたい方や、私とイジーの活動を支援したい方は、ぜひご参加ください。"
+  },
+  {
+    "id": 37,
+    "start": 203080,
+    "end": 213480,
+    "start_timestamp": "56:24",
+    "text": "If you join our Easy English membership, then we'll send you loads of downloads and extras that use our videos and podcasts to create useful learning material.",
+    "japanese": "Easy Englishのメンバーシップにご加入いただくと、動画やポッドキャストを活用した役に立つ教材など、多くのダウンロード特典や追加コンテンツをお送りします。"
+  },
+  {
+    "id": 38,
+    "start": 213530,
+    "end": 221640,
+    "start_timestamp": "59:18",
+    "text": "We also have our fun and helpful online conversation classes divided into three different membership categories.",
+    "japanese": "また、3つのメンバーシップカテゴリーに分かれた、楽しくてためになるオンライン会話クラスも用意しています。"
+  },
+  {
+    "id": 39,
+    "start": 221640,
+    "end": 225960,
+    "start_timestamp": "61:34",
+    "text": "So our first membership is the Supporter membership.",
+    "japanese": "まず最初のメンバーシップは「サポーター・メンバーシップ」です。"
+  },
+  {
+    "id": 40,
+    "start": 225960,
+    "end": 227680,
+    "start_timestamp": "62:46",
+    "text": "This is basically for everyone.",
+    "japanese": "これは基本的にどなたでも対象です。"
+  },
+  {
+    "id": 41,
+    "start": 227680,
+    "end": 233600,
+    "start_timestamp": "63:14",
+    "text": "Whether you're a learner, a teacher, or you just watch our videos and listen to our podcasts for fun.",
+    "japanese": "学習者でも、講師の方でも、あるいはただ趣味で動画やポッドキャストを楽しんでいる方でも大丈夫です。"
+  },
+  {
+    "id": 42,
+    "start": 233600,
+    "end": 238280,
+    "start_timestamp": "64:53",
+    "text": "Every member in the Supporter membership will become part of our Discord community.",
+    "japanese": "サポーター・メンバーシップの会員は全員、私たちのDiscordコミュニティに参加できます。"
+  },
+  {
+    "id": 43,
+    "start": 238390,
+    "end": 245240,
+    "start_timestamp": "66:13",
+    "text": "Discord is a chat tool where you can basically chat with all the other members and us, and maybe you want to find international friends.",
+    "japanese": "Discordは他のメンバーや私たちとチャットができるツールで、世界中の友達を作るのにも最適です。"
+  },
+  {
+    "id": 44,
+    "start": 245240,
+    "end": 251560,
+    "start_timestamp": "68:07",
+    "text": "We have a bunch of international people there who write every day in English about basically everything.",
+    "japanese": "そこには世界中からたくさんの人が集まっており、毎日英語でさまざまなことについて書き込んでいます。"
+  },
+  {
+    "id": 45,
+    "start": 251560,
+    "end": 255840,
+    "start_timestamp": "69:52",
+    "text": "We discuss life, we improve our English, and we get to know each other.",
+    "japanese": "生活について語り合ったり、英語力を高め合ったり、お互いを知り合ったりしています。"
+  },
+  {
+    "id": 46,
+    "start": 255840,
+    "end": 264200,
+    "start_timestamp": "71:04",
+    "text": "There are people from all around the world—people learning English for their job, people who just moved to an English-speaking country, or people who just really want to make friends.",
+    "japanese": "仕事のために英語を学んでいる人、英語圏に引っ越したばかりの人、ただ友達を作りたい人など、世界中から人々が参加しています。"
+  },
+  {
+    "id": 47,
+    "start": 264250,
+    "end": 276640,
+    "start_timestamp": "73:24",
+    "text": "On top of being a member of our Discord community and writing every day in English, we provide weekly challenges for you and also yearly events to really fast-track your English learning journey.",
+    "japanese": "Discordコミュニティに参加して毎日英語を書くことに加えて、毎週の挑戦課題や年間のイベントも用意しており、英語学習の成果をスピードアップできます。"
+  },
+  {
+    "id": 48,
+    "start": 276640,
+    "end": 283800,
+    "start_timestamp": "76:50",
+    "text": "This is your chance to daily practice English, write in English every day, and support our project with a tiny amount.",
+    "japanese": "わずかな金額で私たちのプロジェクトを支援しながら、毎日英語を練習し、日常的に英語を書く絶好の機会です。"
+  },
+  {
+    "id": 49,
+    "start": 283800,
+    "end": 290840,
+    "start_timestamp": "78:50",
+    "text": "If you really want to dive into the English language and improve your English comprehension skills, then become a Learner member.",
+    "japanese": "本気で英語に打ち込み、読解・聴解能力を高めたいなら、「ラーナー・メンバー」になるのがおすすめです。"
+  },
+  {
+    "id": 50,
+    "start": 290940,
+    "end": 294400,
+    "start_timestamp": "80:49",
+    "text": "There you'll get perks for our videos and podcasts.",
+    "japanese": "そこでは、動画やポッドキャストに関する特典を受け取ることができます。"
+  },
+  {
+    "id": 51,
+    "start": 294400,
+    "end": 303000,
+    "start_timestamp": "81:46",
+    "text": "For our videos, we offer worksheets, vocabulary lists, transcripts, and video downloads for all of our episodes with and without subtitles.",
+    "japanese": "動画については、すべてのエピソードのワークシート、単語リスト、文字起こしテキスト、そして字幕あり・なしの動画ダウンロードを提供しています。"
+  },
+  {
+    "id": 52,
+    "start": 303000,
+    "end": 307920,
+    "start_timestamp": "84:10",
+    "text": "This means you can be creative with how you want to improve your everyday English.",
+    "japanese": "つまり、日常英語を上達させる方法を自分に合わせて工夫できるということです。"
+  },
+  {
+    "id": 53,
+    "start": 307920,
+    "end": 320880,
+    "start_timestamp": "85:32",
+    "text": "Perhaps you want to fill in the blanks of the worksheet after watching the episode with a vocabulary list, read along with the transcript whilst listening to the episode, or watch the download of the episode without subtitles to test your listening skills.",
+    "japanese": "エピソードを観た後に単語リストを使ってワークシートの穴埋めをしたり、音声を聴きながらスクリプトを目で追ったり、字幕なしの動画でリスニング力を試したりできます。"
+  },
+  {
+    "id": 54,
+    "start": 320880,
+    "end": 325960,
+    "start_timestamp": "89:08",
+    "text": "We'll supply you with the material, and you can be in charge of your English learning journey.",
+    "japanese": "私たちが教材を提供するので、主導権を持ってご自身の英語学習を進めることができます。"
+  },
+  {
+    "id": 55,
+    "start": 325960,
+    "end": 329860,
+    "start_timestamp": "90:32",
+    "text": "Or maybe you want to try the interactive transcript for our podcasts.",
+    "japanese": "あるいは、ポッドキャスト用のインタラクティブな文字起こし機能（インタラクティブ・トランスクリプト）を試してみるのもいいかもしれません。"
+  },
+  {
+    "id": 56,
+    "start": 329860,
+    "end": 335480,
+    "start_timestamp": "91:37",
+    "text": "The interactive transcript player allows you to play every episode and read along in real time.",
+    "japanese": "インタラクティブ・トランスクリプト・プレイヤーを使えば、エピソードを再生しながらリアルタイムで文字を追いかけて読むことができます。"
+  },
+  {
+    "id": 57,
+    "start": 335480,
+    "end": 337480,
+    "start_timestamp": "93:11",
+    "text": "Hi ya, I'm Mitch.",
+    "japanese": "やあ、ミッチです。"
+  },
+  {
+    "id": 58,
+    "start": 337480,
+    "end": 339440,
+    "start_timestamp": "93:44",
+    "text": "Hello, I'm Izzy.",
+    "japanese": "こんにちは、イジーです。"
+  },
+  {
+    "id": 59,
+    "start": 339440,
+    "end": 344280,
+    "start_timestamp": "94:17",
+    "text": "We want to give you a free podcast to help you learn English.",
+    "japanese": "皆さんの英語学習に役立つ無料のポッドキャストをお届けしたいと思っています。"
+  },
+  {
+    "id": 60,
+    "start": 344330,
+    "end": 357560,
+    "start_timestamp": "95:38",
+    "text": "If you become stuck, simply click the translate button, and you'll find the entire transcript can be translated into the language of your choice, allowing you to translate specific sentences that you need help with.",
+    "japanese": "分からなくなったら翻訳ボタンをクリックするだけで、文字起こし全体を好きな言語に翻訳でき、助けが必要な特定の文だけを訳すことができます。"
+  },
+  {
+    "id": 61,
+    "start": 357560,
+    "end": 368960,
+    "start_timestamp": "99:19",
+    "text": "The interactive transcript is available on your laptop or phone, allowing you to improve your listening skills anywhere—at work, on the train, whilst you clean, and on the go.",
+    "japanese": "インタラクティブ・トランスクリプトはノートパソコンやスマートフォンで利用できるため、職場、電車内、掃除中、外出先など、どこでもリスニング力を高められます。"
+  },
+  {
+    "id": 62,
+    "start": 369020,
+    "end": 374960,
+    "start_timestamp": "102:30",
+    "text": "Or maybe you want to join our conversation membership in our online pub.",
+    "japanese": "あるいは、オンラインパブで開催している会話メンバーシップに参加してみてはいかがでしょうか。"
+  },
+  {
+    "id": 63,
+    "start": 374960,
+    "end": 388540,
+    "start_timestamp": "104:09",
+    "text": "With our conversation membership set to the theme of a typical British pub, you'll get to meet us and other people from all other cultures and countries around the world to come and practise your English on a weekly basis.",
+    "japanese": "典型的なイギリスのパブをテーマにした会話メンバーシップでは、私たちや世界中のさまざまな文化や国から集まった人々と出会い、毎週英語の練習ができます。"
+  },
+  {
+    "id": 64,
+    "start": 388540,
+    "end": 393520,
+    "start_timestamp": "107:55",
+    "text": "This is for you if you want to fully immerse into the English language.",
+    "japanese": "英語の世界にどっぷり浸かりたいと思っている方にぴったりです。"
+  },
+  {
+    "id": 65,
+    "start": 393580,
+    "end": 399280,
+    "start_timestamp": "109:19",
+    "text": "You want to not only comprehend and understand, but you want to go out and talk.",
+    "japanese": "ただ理解するだけでなく、実際に外に出て話せるようになりたいと考えているはずです。"
+  },
+  {
+    "id": 66,
+    "start": 399280,
+    "end": 411020,
+    "start_timestamp": "110:54",
+    "text": "You want to go to a pub like we are here now and talk to the people, order beer, be able to make new friends, and actually really integrate, go to that pub night out.",
+    "japanese": "今私たちがいるようなパブに行って人と話したり、ビールを注文したり、新しい友達を作ったりして、パブの夜を楽しんで本当の意味で溶け込みたいですよね。"
+  },
+  {
+    "id": 67,
+    "start": 411020,
+    "end": 423260,
+    "start_timestamp": "114:10",
+    "text": "So maybe you want to get the engine going on that school English you learnt back when you were a child, and you want to take your English to that next level because maybe you've hit a wall or you've become a bit nervous about speaking English, then this is the place for you to come.",
+    "japanese": "昔学校で習った英語を呼び覚ましたい方や、伸び悩みを感じていたり話すのが少し不安になっていたりして次のステップへ進みたい方に、ここは最適な場所です。"
+  },
+  {
+    "id": 68,
+    "start": 423310,
+    "end": 428920,
+    "start_timestamp": "117:33",
+    "text": "So the conversation membership isn't necessarily for people who are looking to visit England or come to England.",
+    "japanese": "この会話メンバーシップは、イギリスを訪れる予定がある人や来英しようとしている人だけのものではありません。"
+  },
+  {
+    "id": 69,
+    "start": 428920,
+    "end": 439840,
+    "start_timestamp": "119:08",
+    "text": "Maybe you just want to interact with your friends, your loved ones, or your work colleagues in an English-speaking environment, then this is really the place where you can help pick up your English where you left it back at school.",
+    "japanese": "友達や大切な人、あるいは職場の同僚と英語環境で交流したい方にとって、学校で止まっていた英語力を再び取り戻すのに最適な場所です。"
+  },
+  {
+    "id": 70,
+    "start": 439840,
+    "end": 444880,
+    "start_timestamp": "122:10",
+    "text": "You can then bring your English to the next level and actually feel comfortable with it.",
+    "japanese": "英語力を次のレベルへと引き上げ、自信を持って自然に使えるようになります。"
+  },
+  {
+    "id": 71,
+    "start": 444880,
+    "end": 455160,
+    "start_timestamp": "123:34",
+    "text": "By becoming a conversation member, not only are you going to join us and other members in the pub, you'll also be eligible for all of the perks for our Learner membership and have access to our Discord.",
+    "japanese": "会話メンバーになると、パブで私たちや他のメンバーと交流できるだけでなく、ラーナー・メンバーの全特典を受けることができ、Discordへのアクセスも可能になります。"
+  },
+  {
+    "id": 72,
+    "start": 455160,
+    "end": 460100,
+    "start_timestamp": "126:26",
+    "text": "And if what we're telling you isn't enough, then here's some words from some of our lovely members.",
+    "japanese": "私たちの説明だけでは不十分という方のために、素晴らしい会員の方々からの声をご紹介します。"
+  },
+  {
+    "id": 73,
+    "start": 460100,
+    "end": 472740,
+    "start_timestamp": "127:48",
+    "text": "I'm Paulo and I was watching all the Easy English videos, but I felt that I was practising alone. So I decided to become a member and what I found was a warm place to practise.",
+    "japanese": "パウロです。Easy Englishの動画を全部見ていましたが、一人で練習しているような気がしていました。そこでメンバーになることを決めたのですが、あたたかく練習できる場所が見つかりました。"
+  },
+  {
+    "id": 74,
+    "start": 472850,
+    "end": 483920,
+    "start_timestamp": "131:20",
+    "text": "And what I like most is that, on Discord and during the pub calls, people ask smart questions, not basic stuff like \"What is the weather today?\".",
+    "japanese": "一番気に入っているのは、Discordやパブ通話で、「今日の天気は？」といった基本的な質問ではなく、深い質問をしてくれることです。"
+  },
+  {
+    "id": 75,
+    "start": 483920,
+    "end": 490880,
+    "start_timestamp": "134:25",
+    "text": "We are having a real conversation and that's, I think, helping my English grow.",
+    "japanese": "本物の会話ができていることが、僕の英語の上達につながっていると感じています。"
+  },
+  {
+    "id": 76,
+    "start": 490880,
+    "end": 501960,
+    "start_timestamp": "136:20",
+    "text": "The reason why I decided to be a member of Easy English is that I was searching for an English learning community.",
+    "japanese": "Easy Englishのメンバーになろうと決めた理由は、英語学習のコミュニティを探していたからです。"
+  },
+  {
+    "id": 77,
+    "start": 502060,
+    "end": 522880,
+    "start_timestamp": "139:27",
+    "text": "The best part about it is our conversation session where we meet other members and also Easy & Mitch, and yeah, the atmosphere is really calm, nice, friendly, so I really like it.",
+    "japanese": "一番魅力的なのは、他のメンバーやイジー、ミッチと出会える会話セッションです。雰囲気も落ち着いていて、親しみやすく、とても気に入っています。"
+  },
+  {
+    "id": 78,
+    "start": 522980,
+    "end": 552400,
+    "start_timestamp": "145:16",
+    "text": "At the conversation, you can try your English in a natural way, and I think there is an environment where we don't have pressure, we don't have tasks, and we don't have to do something right.",
+    "japanese": "会話の場では自然に英語を試すことができますし、プレッシャーも課題もなく、「正しくやらなきゃいけない」という決まりもない環境が整っていると思います。"
+  },
+  {
+    "id": 79,
+    "start": 552510,
+    "end": 573720,
+    "start_timestamp": "153:25",
+    "text": "You can make mistakes and this is so human and acceptable. I think I feel like a friend of the other members in the conversation sessions.",
+    "japanese": "間違えてもいいんです。それってすごく人間らしいし、受け入れられます。セッションでは、他のメンバーと友達同士のような関係になれている気がします。"
+  },
+  {
+    "id": 80,
+    "start": 573720,
+    "end": 580040,
+    "start_timestamp": "159:22",
+    "text": "Basically, it's the community feeling which is the best thing about it.",
+    "japanese": "要するに、このコミュニティの一体感こそが一番の魅力なんです。"
+  },
+  {
+    "id": 81,
+    "start": 580090,
+    "end": 591280,
+    "start_timestamp": "161:08",
+    "text": "So if you're not sure if the conversation membership is for you, maybe you're feeling a bit nervous or you're not too sure what your English level is, then we're offering you a 7-day free trial.",
+    "japanese": "会話メンバーシップが自分に合っているかわからない方、少し不安を感じている方、ご自身の英語レベルがよく分からない方のために、7日間の無料体験をご用意しています。"
+  },
+  {
+    "id": 82,
+    "start": 591280,
+    "end": 595740,
+    "start_timestamp": "164:12",
+    "text": "So come try it out, we're looking forward to meeting you in our online pub.",
+    "japanese": "ぜひ試してみてください。オンラインパブでお会いできるのを楽しみにしています。"
+  },
+  {
+    "id": 83,
+    "start": 595740,
+    "end": 596740,
+    "start_timestamp": "165:29",
+    "text": "Cheers!",
+    "japanese": "乾杯！"
+  },
+  {
+    "id": 84,
+    "start": 596740,
+    "end": 597740,
+    "start_timestamp": "165:47",
+    "text": "Cheers!",
+    "japanese": "乾杯！"
+  },
+  {
+    "id": 85,
+    "start": 597740,
+    "end": 608090,
+    "start_timestamp": "166:05",
+    "text": "So if you're looking to improve your English or just help support us as a learner, a teacher, or just for fun, then come and join our membership at easyenglish.video/membership...",
+    "japanese": "英語力を伸ばしたい方、学習者や指導者として、あるいはただ楽しむためにサポートしたい方は、ぜひ easyenglish.video/membership でメンバーシップにご参加ください。"
+  },
+  {
+    "id": 86,
+    "start": 608090,
+    "end": 611780,
+    "start_timestamp": "168:54",
+    "text": "...and come be part of our community.",
+    "japanese": "そして、私たちのコミュニティの一員になりましょう。"
+  },
+  {
+    "id": 87,
+    "start": 611780,
+    "end": 612780,
+    "start_timestamp": "169:56",
+    "text": "Ta-ra!",
+    "japanese": "またね！"
+  }
+]
