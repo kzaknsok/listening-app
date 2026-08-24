@@ -81,10 +81,10 @@ function startLoop() {
 }
 
 // 🔄 コンテンツ読み込み処理
+// 🔄 コンテンツ読み込み処理
 async function loadContent(baseName) {
     if (!baseName) return;
 
-    // web ディレクトリ直下に配置されたアセットを参照
     const audioPath = `${baseName}.mp3`;
     const jsonPath  = `${baseName}.json`;
 
@@ -98,6 +98,8 @@ async function loadContent(baseName) {
         
         subtitlesData = await response.json();
         subtitlesMap.clear();
+        
+        // 1. JSON データを保持（Map に入れる）
         subtitlesData.forEach(item => subtitlesMap.set(item.id, item));
 
         // メモリ解放と再確保
@@ -109,11 +111,17 @@ async function loadContent(baseName) {
         const ITEM_SIZE = 12; 
         structBufferPtr = Module._malloc(subtitlesData.length * ITEM_SIZE);
 
+        // 2. 秒表記（0.12 や 4.0 など）をミリ秒（整数）に変換して WASM メモリ領域へ転送
         subtitlesData.forEach((item, index) => {
             const offset = structBufferPtr + index * ITEM_SIZE;
+            
+            // 秒 (float/number) を 1000倍 してミリ秒 (整数のi32) に変換
+            const startMs = Math.round(item.start * 1000);
+            const endMs   = Math.round(item.end * 1000);
+
             Module.setValue(offset, item.id, 'i32');
-            Module.setValue(offset + 4, item.start, 'i32');
-            Module.setValue(offset + 8, item.end, 'i32');
+            Module.setValue(offset + 4, startMs, 'i32'); // ミリ秒でセット
+            Module.setValue(offset + 8, endMs, 'i32');   // ミリ秒でセット
         });
 
         console.log(`Loaded content successfully: ${baseName}`);
