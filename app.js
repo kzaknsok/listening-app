@@ -81,7 +81,6 @@ function startLoop() {
 }
 
 // 🔄 コンテンツ読み込み処理
-// 🔄 コンテンツ読み込み処理
 async function loadContent(baseName) {
     if (!baseName) return;
 
@@ -96,10 +95,27 @@ async function loadContent(baseName) {
         const response = await fetch(jsonPath);
         if (!response.ok) throw new Error(`HTTP Error: ${response.status} (${jsonPath})`);
         
-        subtitlesData = await response.json();
+        let rawData = await response.json();
+
+        // 1. JSON データの時間単位（秒 vs ミリ秒）を自動判定してミリ秒に補正
+        // データ内に小数（0.12など）が含まれるか、数値が極端に小さければ「秒」と判定
+        const isSecondsFormat = rawData.some(item => !Number.isInteger(item.start) || item.start < 1000);
+
+        const normalizedData = rawData.map(item => {
+            const startMs = isSecondsFormat ? Math.round(Number(item.start) * 1000) : Math.round(Number(item.start));
+            const endMs   = isSecondsFormat ? Math.round(Number(item.end) * 1000)   : Math.round(Number(item.end));
+            return {
+                ...item,
+                _startMs: startMs,
+                _endMs: endMs
+            };
+        });
+
+        // 2. start 時間で昇順ソート
+        normalizedData.sort((a, b) => a._startMs - b._startMs);
+
+        subtitlesData = normalizedData;
         subtitlesMap.clear();
-        
-        // 1. JSON データを保持（Map に入れる）
         subtitlesData.forEach(item => subtitlesMap.set(item.id, item));
 
         // メモリ解放と再確保
@@ -108,23 +124,18 @@ async function loadContent(baseName) {
             structBufferPtr = null;
         }
 
-        const ITEM_SIZE = 12; 
+        const ITEM_SIZE = 12; // int32_t × 3 = 12 bytes
         structBufferPtr = Module._malloc(subtitlesData.length * ITEM_SIZE);
 
-        // 2. 秒表記（0.12 や 4.0 など）をミリ秒（整数）に変換して WASM メモリ領域へ転送
+        // 3. ミリ秒に正規化した値を WASM のメモリ領域へ展開
         subtitlesData.forEach((item, index) => {
             const offset = structBufferPtr + index * ITEM_SIZE;
-            
-            // 秒 (float/number) を 1000倍 してミリ秒 (整数のi32) に変換
-            const startMs = Math.round(item.start * 1000);
-            const endMs   = Math.round(item.end * 1000);
-
-            Module.setValue(offset, item.id, 'i32');
-            Module.setValue(offset + 4, startMs, 'i32'); // ミリ秒でセット
-            Module.setValue(offset + 8, endMs, 'i32');   // ミリ秒でセット
+            Module.setValue(offset,     item.id,       'i32');
+            Module.setValue(offset + 4, item._startMs, 'i32');
+            Module.setValue(offset + 8, item._endMs,   'i32');
         });
 
-        console.log(`Loaded content successfully: ${baseName}`);
+        console.log(`Loaded content successfully: ${baseName} (Format: ${isSecondsFormat ? 'Seconds' : 'Milliseconds'})`);
         renderSubtitle();
     } catch (err) {
         console.error('Failed to load content:', err);
