@@ -97,13 +97,27 @@ async function loadContent(baseName) {
         
         let rawData = await response.json();
 
-        // 1. JSON データの時間単位（秒 vs ミリ秒）を自動判定してミリ秒に補正
-        // データ内に小数（0.12など）が含まれるか、数値が極端に小さければ「秒」と判定
-        const isSecondsFormat = rawData.some(item => !Number.isInteger(item.start) || item.start < 1000);
+        // 🌟 1. 全データの中での最大値（start / end）を取得して単位を判定
+        let maxTime = 0;
+        rawData.forEach(item => {
+            const s = Number(item.start) || 0;
+            const e = Number(item.end) || 0;
+            if (s > maxTime) maxTime = s;
+            if (e > maxTime) maxTime = e;
+        });
+
+        // 500を超える数値があれば確実に「ミリ秒表記」
+        // (動画/音声が500秒＝約8.3分を超える場合でも、ミリ秒なら数万〜数十万になるため誤判定しません)
+        const isMillisecondsFormat = maxTime > 500;
 
         const normalizedData = rawData.map(item => {
-            const startMs = isSecondsFormat ? Math.round(Number(item.start) * 1000) : Math.round(Number(item.start));
-            const endMs   = isSecondsFormat ? Math.round(Number(item.end) * 1000)   : Math.round(Number(item.end));
+            const rawStart = Number(item.start) || 0;
+            const rawEnd   = Number(item.end) || 0;
+
+            // ミリ秒表記ならそのまま、秒表記なら1000倍する
+            const startMs = isMillisecondsFormat ? Math.round(rawStart) : Math.round(rawStart * 1000);
+            const endMs   = isMillisecondsFormat ? Math.round(rawEnd)   : Math.round(rawEnd * 1000);
+
             return {
                 ...item,
                 _startMs: startMs,
@@ -127,7 +141,7 @@ async function loadContent(baseName) {
         const ITEM_SIZE = 12; // int32_t × 3 = 12 bytes
         structBufferPtr = Module._malloc(subtitlesData.length * ITEM_SIZE);
 
-        // 3. ミリ秒に正規化した値を WASM のメモリ領域へ展開
+        // 3. WASM メモリ領域へ展開
         subtitlesData.forEach((item, index) => {
             const offset = structBufferPtr + index * ITEM_SIZE;
             Module.setValue(offset,     item.id,       'i32');
@@ -135,7 +149,7 @@ async function loadContent(baseName) {
             Module.setValue(offset + 8, item._endMs,   'i32');
         });
 
-        console.log(`Loaded content successfully: ${baseName} (Format: ${isSecondsFormat ? 'Seconds' : 'Milliseconds'})`);
+        console.log(`Loaded content successfully: ${baseName} (Detected: ${isMillisecondsFormat ? 'Milliseconds' : 'Seconds'})`);
         renderSubtitle();
     } catch (err) {
         console.error('Failed to load content:', err);
